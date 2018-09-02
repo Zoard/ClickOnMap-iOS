@@ -1,0 +1,916 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1969BB321BA3634BBE50E294ADA097CA /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB6AF7BE4547CE64DE5711633CFFC0 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		1B8FA59565D2D307B8B295D3FA09F340 /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC73AA8035BD4108AD320A107A91F85C /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		330491929AA6BA0E6C6F34377965922A /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 477402675ED0A2988A6B58AC17AAFFA7 /* SkyFloatingLabelTextField-dummy.m */; };
+		34A96404EFC800B3AFAA32ADB2381F91 /* Pods-ClickOnMapiOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D374D6E5E95DB3FF21B1FC36F199B803 /* Pods-ClickOnMapiOSTests-dummy.m */; };
+		397562BEC8DB998892BEBE5E044CCFEA /* Pods-ClickOnMapiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E529C404293FBCD50B4B8E7B2C4BEAF /* Pods-ClickOnMapiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D9EE3592AB91C517479118EFF73F244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		4CFCEA440ADA76343357B36F0655248F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		5BD6ED71584155F1927C3CDDE6F02F7D /* Pods-ClickOnMapiOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE8A885467D58DDE693CC42956AEAC1 /* Pods-ClickOnMapiOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70094DC80711B30F07105B4738D998C8 /* Pods-ClickOnMapiOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9065C05FF4D3F5F1CE3BDBA9D9704D6 /* Pods-ClickOnMapiOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EC6B3CF859AC97CF1B74F38F4BAB694 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEECCA755E56BD7670ACA5B8FDE8C49 /* UITextField+fixCaretPosition.swift */; };
+		A73E12E5EBDC799C7BE54F8526637DDC /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2FD3B444C15779258A1E4254154328 /* SkyFloatingLabelTextField.swift */; };
+		B24FE308ED39DC5A49FC64409422C70B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		B6DB52489B9655F85BAD9BDE3EC2092D /* Pods-ClickOnMapiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E277EEAB60895A39B72C184931D0046 /* Pods-ClickOnMapiOS-dummy.m */; };
+		C6A38A27793C11FFCB824EF01989257E /* Pods-ClickOnMapiOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DBD25DDED029E5338FCFCF9C9402B /* Pods-ClickOnMapiOSUITests-dummy.m */; };
+		E9D205E2B2CED06D1EF5B5C44AD01560 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F819F53617B740D08F57EED0317B756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40661FDC21F79B96E20FE858DD7E4BE7;
+			remoteInfo = "Pods-ClickOnMapiOS";
+		};
+		45C389F899234B075B163D5ADB1EA35D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A91EFE79DA1D4C371B421FC2B94A0D98;
+			remoteInfo = SkyFloatingLabelTextField;
+		};
+		644E6B68D7B406E842737ABC7697D007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40661FDC21F79B96E20FE858DD7E4BE7;
+			remoteInfo = "Pods-ClickOnMapiOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08C578FFD1453C9BCB2F60E7C68E377A /* Pods-ClickOnMapiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0DE8A885467D58DDE693CC42956AEAC1 /* Pods-ClickOnMapiOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClickOnMapiOSUITests-umbrella.h"; sourceTree = "<group>"; };
+		0F4C363D15FD8599267DB7359B06251D /* Pods-ClickOnMapiOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOS-frameworks.sh"; sourceTree = "<group>"; };
+		0FD488939B639941A2A1E85605A79EF2 /* Pods_ClickOnMapiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClickOnMapiOSUITests.framework; path = "Pods-ClickOnMapiOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18AB6AF7BE4547CE64DE5711633CFFC0 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		1A15B75776D6166F701B61487B71CBAE /* Pods_ClickOnMapiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClickOnMapiOSTests.framework; path = "Pods-ClickOnMapiOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D2387ED78FF8621E5BB0B26782F7F9B /* Pods-ClickOnMapiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClickOnMapiOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		24C84DE4B3599D578E28E0C04ED55854 /* Pods-ClickOnMapiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClickOnMapiOS.modulemap"; sourceTree = "<group>"; };
+		260ECDA26486268090ED5B948A7B1D48 /* Pods-ClickOnMapiOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClickOnMapiOSUITests.modulemap"; sourceTree = "<group>"; };
+		2BF97B233B6AE52894212E2344FE8F99 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F3DD3730BE35BBC34528CC3A2D2A239 /* Pods-ClickOnMapiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E277EEAB60895A39B72C184931D0046 /* Pods-ClickOnMapiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClickOnMapiOS-dummy.m"; sourceTree = "<group>"; };
+		477402675ED0A2988A6B58AC17AAFFA7 /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
+		4E529C404293FBCD50B4B8E7B2C4BEAF /* Pods-ClickOnMapiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClickOnMapiOS-umbrella.h"; sourceTree = "<group>"; };
+		529DBD25DDED029E5338FCFCF9C9402B /* Pods-ClickOnMapiOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClickOnMapiOSUITests-dummy.m"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5DD73B3AF31FA49547122A95419C0537 /* Pods-ClickOnMapiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5EA7DA4F41C248272600D7A0D559A739 /* Pods-ClickOnMapiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		61B05C49F250CF05BC536E5D7C9A6DB6 /* Pods-ClickOnMapiOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSTests-resources.sh"; sourceTree = "<group>"; };
+		62DAB8A0E4FEF65F6B5ECAF2248E6874 /* Pods-ClickOnMapiOSUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSUITests-resources.sh"; sourceTree = "<group>"; };
+		6FDF145F7A323CB3D7B8AC9D389643AF /* Pods-ClickOnMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOS.release.xcconfig"; sourceTree = "<group>"; };
+		8547A24E961A2A286801CCA0B57DA15D /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
+		8FB6B99DFE7605D5809970E26C0CE797 /* Pods-ClickOnMapiOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClickOnMapiOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9324CD4C5FD5C83B2FA172490056FC2B /* Pods-ClickOnMapiOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSUITests-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96021B73AB3076CE469755681DF3DADF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9DAD4168ADC71A28427A57C1C29143 /* Pods-ClickOnMapiOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClickOnMapiOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A1C5D5E99D45A8F5860C6F85FFE36079 /* Pods-ClickOnMapiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClickOnMapiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A5002F41FDB7AAF268B6EAC57167AAC2 /* Pods-ClickOnMapiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B50A54ACD1B9159D8192581DD326975E /* Pods-ClickOnMapiOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClickOnMapiOSTests.modulemap"; sourceTree = "<group>"; };
+		CC73AA8035BD4108AD320A107A91F85C /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
+		CF536E2A36AF5426B119EA4A20475CFD /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
+		D1BDB2B7A9B8C60E53D0B40A023498CF /* Pods-ClickOnMapiOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClickOnMapiOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D374D6E5E95DB3FF21B1FC36F199B803 /* Pods-ClickOnMapiOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClickOnMapiOSTests-dummy.m"; sourceTree = "<group>"; };
+		D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
+		D5B8632AD4838E6A70E209CFB8CFA47F /* Pods_ClickOnMapiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClickOnMapiOS.framework; path = "Pods-ClickOnMapiOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2FD3B444C15779258A1E4254154328 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		DC9C215C45A159465D601956B2877FC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFEECCA755E56BD7670ACA5B8FDE8C49 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+fixCaretPosition.swift"; path = "Sources/UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		E98A48A739C1D50AC79E40240B0B8F94 /* Pods-ClickOnMapiOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		EC6055C3E043CD6099152556F1CFEFD9 /* Pods-ClickOnMapiOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClickOnMapiOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F9065C05FF4D3F5F1CE3BDBA9D9704D6 /* Pods-ClickOnMapiOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClickOnMapiOSTests-umbrella.h"; sourceTree = "<group>"; };
+		FD15FBBAE5E88C61776FD9089921A0C9 /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SkyFloatingLabelTextField.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE350B7F3D47325CF3B777FBCA09887C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF349E392337A30ACDD937106CB52752 /* Pods-ClickOnMapiOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOS-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A2376DB938D6E98566C27406C39B281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CFCEA440ADA76343357B36F0655248F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46179B9E0912438FE430676AFDB0B12B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9D205E2B2CED06D1EF5B5C44AD01560 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		745A3591EFB824C2CAD5996D50686A7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24FE308ED39DC5A49FC64409422C70B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E79CC463578CFBE2503AFAECAA2642EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D9EE3592AB91C517479118EFF73F244 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35B3088F6BCC530E9D22979819471179 /* Pods-ClickOnMapiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BF97B233B6AE52894212E2344FE8F99 /* Info.plist */,
+				B50A54ACD1B9159D8192581DD326975E /* Pods-ClickOnMapiOSTests.modulemap */,
+				D1BDB2B7A9B8C60E53D0B40A023498CF /* Pods-ClickOnMapiOSTests-acknowledgements.markdown */,
+				EC6055C3E043CD6099152556F1CFEFD9 /* Pods-ClickOnMapiOSTests-acknowledgements.plist */,
+				D374D6E5E95DB3FF21B1FC36F199B803 /* Pods-ClickOnMapiOSTests-dummy.m */,
+				E98A48A739C1D50AC79E40240B0B8F94 /* Pods-ClickOnMapiOSTests-frameworks.sh */,
+				61B05C49F250CF05BC536E5D7C9A6DB6 /* Pods-ClickOnMapiOSTests-resources.sh */,
+				F9065C05FF4D3F5F1CE3BDBA9D9704D6 /* Pods-ClickOnMapiOSTests-umbrella.h */,
+				5EA7DA4F41C248272600D7A0D559A739 /* Pods-ClickOnMapiOSTests.debug.xcconfig */,
+				2F3DD3730BE35BBC34528CC3A2D2A239 /* Pods-ClickOnMapiOSTests.release.xcconfig */,
+			);
+			name = "Pods-ClickOnMapiOSTests";
+			path = "Target Support Files/Pods-ClickOnMapiOSTests";
+			sourceTree = "<group>";
+		};
+		3E538C50B5FBAB3A28B0BDDB5EEAA44A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE06ED5906FCC1C2AA7EDA322B1D832D /* SkyFloatingLabelTextField */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CB2F19FE17F98D8D75BDB493855D972 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				96021B73AB3076CE469755681DF3DADF /* Info.plist */,
+				CF536E2A36AF5426B119EA4A20475CFD /* SkyFloatingLabelTextField.modulemap */,
+				D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */,
+				477402675ED0A2988A6B58AC17AAFFA7 /* SkyFloatingLabelTextField-dummy.m */,
+				8547A24E961A2A286801CCA0B57DA15D /* SkyFloatingLabelTextField-prefix.pch */,
+				CC73AA8035BD4108AD320A107A91F85C /* SkyFloatingLabelTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SkyFloatingLabelTextField";
+			sourceTree = "<group>";
+		};
+		526B34267BC60AA152135925D6317212 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E27AD484F8F0DBDD13A7F70001E9A /* Pods-ClickOnMapiOS */,
+				35B3088F6BCC530E9D22979819471179 /* Pods-ClickOnMapiOSTests */,
+				9F993D2F9C50D22091FEC9EA799E839A /* Pods-ClickOnMapiOSUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				3E538C50B5FBAB3A28B0BDDB5EEAA44A /* Pods */,
+				EDA65E8FB00D42FC99F4A7B6ACC67715 /* Products */,
+				526B34267BC60AA152135925D6317212 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9F993D2F9C50D22091FEC9EA799E839A /* Pods-ClickOnMapiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC9C215C45A159465D601956B2877FC6 /* Info.plist */,
+				260ECDA26486268090ED5B948A7B1D48 /* Pods-ClickOnMapiOSUITests.modulemap */,
+				9A9DAD4168ADC71A28427A57C1C29143 /* Pods-ClickOnMapiOSUITests-acknowledgements.markdown */,
+				8FB6B99DFE7605D5809970E26C0CE797 /* Pods-ClickOnMapiOSUITests-acknowledgements.plist */,
+				529DBD25DDED029E5338FCFCF9C9402B /* Pods-ClickOnMapiOSUITests-dummy.m */,
+				9324CD4C5FD5C83B2FA172490056FC2B /* Pods-ClickOnMapiOSUITests-frameworks.sh */,
+				62DAB8A0E4FEF65F6B5ECAF2248E6874 /* Pods-ClickOnMapiOSUITests-resources.sh */,
+				0DE8A885467D58DDE693CC42956AEAC1 /* Pods-ClickOnMapiOSUITests-umbrella.h */,
+				5DD73B3AF31FA49547122A95419C0537 /* Pods-ClickOnMapiOSUITests.debug.xcconfig */,
+				A5002F41FDB7AAF268B6EAC57167AAC2 /* Pods-ClickOnMapiOSUITests.release.xcconfig */,
+			);
+			name = "Pods-ClickOnMapiOSUITests";
+			path = "Target Support Files/Pods-ClickOnMapiOSUITests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE06ED5906FCC1C2AA7EDA322B1D832D /* SkyFloatingLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				DC2FD3B444C15779258A1E4254154328 /* SkyFloatingLabelTextField.swift */,
+				18AB6AF7BE4547CE64DE5711633CFFC0 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				DFEECCA755E56BD7670ACA5B8FDE8C49 /* UITextField+fixCaretPosition.swift */,
+				4CB2F19FE17F98D8D75BDB493855D972 /* Support Files */,
+			);
+			name = SkyFloatingLabelTextField;
+			path = SkyFloatingLabelTextField;
+			sourceTree = "<group>";
+		};
+		EC6E27AD484F8F0DBDD13A7F70001E9A /* Pods-ClickOnMapiOS */ = {
+			isa = PBXGroup;
+			children = (
+				FE350B7F3D47325CF3B777FBCA09887C /* Info.plist */,
+				24C84DE4B3599D578E28E0C04ED55854 /* Pods-ClickOnMapiOS.modulemap */,
+				A1C5D5E99D45A8F5860C6F85FFE36079 /* Pods-ClickOnMapiOS-acknowledgements.markdown */,
+				1D2387ED78FF8621E5BB0B26782F7F9B /* Pods-ClickOnMapiOS-acknowledgements.plist */,
+				3E277EEAB60895A39B72C184931D0046 /* Pods-ClickOnMapiOS-dummy.m */,
+				0F4C363D15FD8599267DB7359B06251D /* Pods-ClickOnMapiOS-frameworks.sh */,
+				FF349E392337A30ACDD937106CB52752 /* Pods-ClickOnMapiOS-resources.sh */,
+				4E529C404293FBCD50B4B8E7B2C4BEAF /* Pods-ClickOnMapiOS-umbrella.h */,
+				08C578FFD1453C9BCB2F60E7C68E377A /* Pods-ClickOnMapiOS.debug.xcconfig */,
+				6FDF145F7A323CB3D7B8AC9D389643AF /* Pods-ClickOnMapiOS.release.xcconfig */,
+			);
+			name = "Pods-ClickOnMapiOS";
+			path = "Target Support Files/Pods-ClickOnMapiOS";
+			sourceTree = "<group>";
+		};
+		EDA65E8FB00D42FC99F4A7B6ACC67715 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5B8632AD4838E6A70E209CFB8CFA47F /* Pods_ClickOnMapiOS.framework */,
+				1A15B75776D6166F701B61487B71CBAE /* Pods_ClickOnMapiOSTests.framework */,
+				0FD488939B639941A2A1E85605A79EF2 /* Pods_ClickOnMapiOSUITests.framework */,
+				FD15FBBAE5E88C61776FD9089921A0C9 /* SkyFloatingLabelTextField.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		25B21D83C989BFB8F7D26BBAB934EAAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD6ED71584155F1927C3CDDE6F02F7D /* Pods-ClickOnMapiOSUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		342EA2580A5E5AA66CFBC9FBC466F5B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70094DC80711B30F07105B4738D998C8 /* Pods-ClickOnMapiOSTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE4C8CC29F0AC3187C80E727A081129 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				397562BEC8DB998892BEBE5E044CCFEA /* Pods-ClickOnMapiOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DAD1621A6F179443BEA62D95F51DCF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B8FA59565D2D307B8B295D3FA09F340 /* SkyFloatingLabelTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		40661FDC21F79B96E20FE858DD7E4BE7 /* Pods-ClickOnMapiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD3E5D5B3FDF8FADB3BB0805FC7010D5 /* Build configuration list for PBXNativeTarget "Pods-ClickOnMapiOS" */;
+			buildPhases = (
+				4B8919CC7FB4B90B968D79DC095C996F /* Sources */,
+				46179B9E0912438FE430676AFDB0B12B /* Frameworks */,
+				3AE4C8CC29F0AC3187C80E727A081129 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBCB4C3407DAB1C9DD266E3A2A6C8E9A /* PBXTargetDependency */,
+			);
+			name = "Pods-ClickOnMapiOS";
+			productName = "Pods-ClickOnMapiOS";
+			productReference = D5B8632AD4838E6A70E209CFB8CFA47F /* Pods_ClickOnMapiOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		68BECBDC4613BA407B6E777365A24815 /* Pods-ClickOnMapiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19911AC0DA2B9242ECE5D7FABD628C95 /* Build configuration list for PBXNativeTarget "Pods-ClickOnMapiOSUITests" */;
+			buildPhases = (
+				D459A65F57C53C316A97FB3900BE98A9 /* Sources */,
+				2A2376DB938D6E98566C27406C39B281 /* Frameworks */,
+				25B21D83C989BFB8F7D26BBAB934EAAB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D5CDC00E18D96EE52C8BEBD4421BCC9 /* PBXTargetDependency */,
+			);
+			name = "Pods-ClickOnMapiOSUITests";
+			productName = "Pods-ClickOnMapiOSUITests";
+			productReference = 0FD488939B639941A2A1E85605A79EF2 /* Pods_ClickOnMapiOSUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A91EFE79DA1D4C371B421FC2B94A0D98 /* SkyFloatingLabelTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF53A312EF3FD59C274D9C868DD7B871 /* Build configuration list for PBXNativeTarget "SkyFloatingLabelTextField" */;
+			buildPhases = (
+				A4905B7AA2E2F622092911BA866940E6 /* Sources */,
+				E79CC463578CFBE2503AFAECAA2642EF /* Frameworks */,
+				58DAD1621A6F179443BEA62D95F51DCF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyFloatingLabelTextField;
+			productName = SkyFloatingLabelTextField;
+			productReference = FD15FBBAE5E88C61776FD9089921A0C9 /* SkyFloatingLabelTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9143FB2A72ECDA6567F64F89B7AA381 /* Pods-ClickOnMapiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF974A2C28441E6BA19E0D48F7710F94 /* Build configuration list for PBXNativeTarget "Pods-ClickOnMapiOSTests" */;
+			buildPhases = (
+				6821FD4DB994BC9973AC0FAEB8DC6A1F /* Sources */,
+				745A3591EFB824C2CAD5996D50686A7C /* Frameworks */,
+				342EA2580A5E5AA66CFBC9FBC466F5B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C85923D756538AF5F4E2ACD4B1A37C22 /* PBXTargetDependency */,
+			);
+			name = "Pods-ClickOnMapiOSTests";
+			productName = "Pods-ClickOnMapiOSTests";
+			productReference = 1A15B75776D6166F701B61487B71CBAE /* Pods_ClickOnMapiOSTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = EDA65E8FB00D42FC99F4A7B6ACC67715 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40661FDC21F79B96E20FE858DD7E4BE7 /* Pods-ClickOnMapiOS */,
+				B9143FB2A72ECDA6567F64F89B7AA381 /* Pods-ClickOnMapiOSTests */,
+				68BECBDC4613BA407B6E777365A24815 /* Pods-ClickOnMapiOSUITests */,
+				A91EFE79DA1D4C371B421FC2B94A0D98 /* SkyFloatingLabelTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B8919CC7FB4B90B968D79DC095C996F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6DB52489B9655F85BAD9BDE3EC2092D /* Pods-ClickOnMapiOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6821FD4DB994BC9973AC0FAEB8DC6A1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34A96404EFC800B3AFAA32ADB2381F91 /* Pods-ClickOnMapiOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4905B7AA2E2F622092911BA866940E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330491929AA6BA0E6C6F34377965922A /* SkyFloatingLabelTextField-dummy.m in Sources */,
+				A73E12E5EBDC799C7BE54F8526637DDC /* SkyFloatingLabelTextField.swift in Sources */,
+				1969BB321BA3634BBE50E294ADA097CA /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				8EC6B3CF859AC97CF1B74F38F4BAB694 /* UITextField+fixCaretPosition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D459A65F57C53C316A97FB3900BE98A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6A38A27793C11FFCB824EF01989257E /* Pods-ClickOnMapiOSUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D5CDC00E18D96EE52C8BEBD4421BCC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ClickOnMapiOS";
+			target = 40661FDC21F79B96E20FE858DD7E4BE7 /* Pods-ClickOnMapiOS */;
+			targetProxy = 3F819F53617B740D08F57EED0317B756 /* PBXContainerItemProxy */;
+		};
+		C85923D756538AF5F4E2ACD4B1A37C22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ClickOnMapiOS";
+			target = 40661FDC21F79B96E20FE858DD7E4BE7 /* Pods-ClickOnMapiOS */;
+			targetProxy = 644E6B68D7B406E842737ABC7697D007 /* PBXContainerItemProxy */;
+		};
+		FBCB4C3407DAB1C9DD266E3A2A6C8E9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SkyFloatingLabelTextField;
+			target = A91EFE79DA1D4C371B421FC2B94A0D98 /* SkyFloatingLabelTextField */;
+			targetProxy = 45C389F899234B075B163D5ADB1EA35D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		02B26B9FDEE9B6E9982F5A55ABD0A3D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FDF145F7A323CB3D7B8AC9D389643AF /* Pods-ClickOnMapiOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClickOnMapiOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClickOnMapiOS/Pods-ClickOnMapiOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0303B151ECF9BE06C00657FD390467FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5002F41FDB7AAF268B6EAC57167AAC2 /* Pods-ClickOnMapiOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClickOnMapiOSUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClickOnMapiOSUITests/Pods-ClickOnMapiOSUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1CCB35EC4F7592AD8563CAAC608D1BED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkyFloatingLabelTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField.modulemap";
+				PRODUCT_MODULE_NAME = SkyFloatingLabelTextField;
+				PRODUCT_NAME = SkyFloatingLabelTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25258BF6CEEB992CFB2738543FB40FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F3DD3730BE35BBC34528CC3A2D2A239 /* Pods-ClickOnMapiOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClickOnMapiOSTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClickOnMapiOSTests/Pods-ClickOnMapiOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		86F0AC828AFEC4F3650A8923C66C2012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08C578FFD1453C9BCB2F60E7C68E377A /* Pods-ClickOnMapiOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClickOnMapiOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClickOnMapiOS/Pods-ClickOnMapiOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3F7D6458CF2B9644BE8881CA6B7DA7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkyFloatingLabelTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SkyFloatingLabelTextField/SkyFloatingLabelTextField.modulemap";
+				PRODUCT_MODULE_NAME = SkyFloatingLabelTextField;
+				PRODUCT_NAME = SkyFloatingLabelTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE4523F427D00BDD54E27A359EE95780 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DD73B3AF31FA49547122A95419C0537 /* Pods-ClickOnMapiOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClickOnMapiOSUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClickOnMapiOSUITests/Pods-ClickOnMapiOSUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CD76D91FBB3569774B6E7AB023932D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D004329E236DC147B97EF965D57304EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D192A31DDA719008B029994E658A8292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA7DA4F41C248272600D7A0D559A739 /* Pods-ClickOnMapiOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ClickOnMapiOSTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClickOnMapiOSTests/Pods-ClickOnMapiOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19911AC0DA2B9242ECE5D7FABD628C95 /* Build configuration list for PBXNativeTarget "Pods-ClickOnMapiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE4523F427D00BDD54E27A359EE95780 /* Debug */,
+				0303B151ECF9BE06C00657FD390467FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD76D91FBB3569774B6E7AB023932D1D /* Debug */,
+				D004329E236DC147B97EF965D57304EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD3E5D5B3FDF8FADB3BB0805FC7010D5 /* Build configuration list for PBXNativeTarget "Pods-ClickOnMapiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86F0AC828AFEC4F3650A8923C66C2012 /* Debug */,
+				02B26B9FDEE9B6E9982F5A55ABD0A3D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF974A2C28441E6BA19E0D48F7710F94 /* Build configuration list for PBXNativeTarget "Pods-ClickOnMapiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D192A31DDA719008B029994E658A8292 /* Debug */,
+				25258BF6CEEB992CFB2738543FB40FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF53A312EF3FD59C274D9C868DD7B871 /* Build configuration list for PBXNativeTarget "SkyFloatingLabelTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CCB35EC4F7592AD8563CAAC608D1BED /* Debug */,
+				A3F7D6458CF2B9644BE8881CA6B7DA7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_ClickOnMapiOSUITests {
+  umbrella header "Pods-ClickOnMapiOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

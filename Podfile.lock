@@ -1,0 +1,16 @@
+PODS:
+  - SkyFloatingLabelTextField (3.5.2)
+
+DEPENDENCIES:
+  - SkyFloatingLabelTextField (~> 3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SkyFloatingLabelTextField
+
+SPEC CHECKSUMS:
+  SkyFloatingLabelTextField: f0672b67cd0e86abda946c0dc3b2fe8580767dbb
+
+PODFILE CHECKSUM: 2e3e297ddc02a01ea77fdf31aca93728cbea7347
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module Pods_ClickOnMapiOS {
+  umbrella header "Pods-ClickOnMapiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
