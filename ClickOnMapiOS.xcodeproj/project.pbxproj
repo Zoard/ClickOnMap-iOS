@@ -17,6 +17,8 @@
 		2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901A2213C845600B5D001 /* VGISystem.swift */; };
 		2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901A7213C90D800B5D001 /* LoginViewController.swift */; };
 		2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901AB213CA25600B5D001 /* RegisterViewController.swift */; };
+		2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */; };
+		2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */; };
 		2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */; };
 		5A85BC11984229B6FF265DCB /* Pods_ClickOnMapiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0114A0C69CF09948282F2FD8 /* Pods_ClickOnMapiOSTests.framework */; };
 		E7B03D902D868690A205EB92 /* Pods_ClickOnMapiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B208C355BA68DBC61E64BEDD /* Pods_ClickOnMapiOS.framework */; };
@@ -58,6 +60,8 @@
 		2C9901A2213C845600B5D001 /* VGISystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGISystem.swift; sourceTree = "<group>"; };
 		2C9901A7213C90D800B5D001 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C9901AB213CA25600B5D001 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewController.swift; sourceTree = "<group>"; };
+		2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewCell.swift; sourceTree = "<group>"; };
 		2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FFDAB5FE6F2D6B3C8B5C5AD /* Pods-ClickOnMapiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickOnMapiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickOnMapiOSUITests/Pods-ClickOnMapiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6C871C3637214B7F87535B8B /* Pods-ClickOnMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickOnMapiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickOnMapiOS/Pods-ClickOnMapiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				2C99019E213C822D00B5D001 /* Hub */,
 				2C9901A4213C8DF800B5D001 /* Login */,
 				2C9901A9213CA23300B5D001 /* Register */,
+				2C9901AD213CAD3F00B5D001 /* Add System */,
 				2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */,
 				2C7BA2F920C34A1E009FE671 /* Assets.xcassets */,
 				2C99019C213C811F00B5D001 /* Main.storyboard */,
@@ -214,6 +219,31 @@
 			isa = PBXGroup;
 			children = (
 				2C9901AB213CA25600B5D001 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C9901AD213CAD3F00B5D001 /* Add System */ = {
+			isa = PBXGroup;
+			children = (
+				2C9901AF213CAD6200B5D001 /* Controller */,
+				2C9901AE213CAD5600B5D001 /* View */,
+			);
+			path = "Add System";
+			sourceTree = "<group>";
+		};
+		2C9901AE213CAD5600B5D001 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C9901AF213CAD6200B5D001 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -457,7 +487,9 @@
 				2C7BA2F520C34A1E009FE671 /* HubViewController.swift in Sources */,
 				2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */,
 				2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */,
+				2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */,
 				2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */,
+				2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */,
 				2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */,
 				2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */,
 			);

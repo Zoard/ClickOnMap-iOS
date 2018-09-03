@@ -27,6 +27,10 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.vgiSystems.count
     }

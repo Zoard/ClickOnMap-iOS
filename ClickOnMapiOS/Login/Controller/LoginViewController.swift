@@ -20,6 +20,10 @@ class LoginViewController : UIViewController {
         super.viewDidLoad()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     @IBAction func login() {
         
     }

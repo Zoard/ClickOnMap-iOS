@@ -20,6 +20,10 @@ class RegisterViewController : UIViewController {
         super.viewDidLoad()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
     @IBAction func register() {
         
     }

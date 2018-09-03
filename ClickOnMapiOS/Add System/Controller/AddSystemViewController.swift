@@ -1,0 +1,85 @@
+//
+//  AddSystemViewController.swift
+//  ClickOnMapiOS
+//
+//  Created by Zoárd Geöcze on 02/09/2018.
+//  Copyright © 2018 Zoárd Geöcze. All rights reserved.
+//
+
+import UIKit
+import Foundation
+
+class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var systemSearchBar: UISearchBar!
+    @IBOutlet weak var addSystemTableView: UITableView!
+    
+    let vgiSystems: Array<VGISystem> = [VGISystem(address: "192.168.1.1", name: "Cidadão Viçosa",
+                                                  description: "Sistema para a Cidade de Viçosa",
+                                                  color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0),
+                                        VGISystem(address: "192.168.1.1", name: "Gota D'agua",
+                                                  description: "Sistema para evitar desperdício de água no estado de Minas Gerais",
+                                                  color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0)]
+    
+    var searchList: Array<VGISystem> = []
+    
+    
+    override func viewDidLoad() {
+        self.addSystemTableView.dataSource = self
+        self.addSystemTableView.delegate = self
+        self.systemSearchBar.delegate = self
+        
+        self.searchList = self.vgiSystems
+        
+        changeSearchBarAttributes()
+        
+        super.viewDidLoad()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.searchList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Add System Cell", for: indexPath) as! AddSystemViewCell
+        let vgiSystem = self.searchList[indexPath.row]
+        cell.configureCellFor(vgiSystem)
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 130 : 150
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchList = self.vgiSystems
+        if searchText != "" {
+            let filteredList = self.searchList.filter { $0.name.lowercased().contains(searchText.lowercased())}
+            self.searchList = filteredList
+        }
+        
+        self.addSystemTableView.reloadData()
+    }
+    
+    func changeSearchBarAttributes() {
+        
+        let textFieldInsideSearchBar = systemSearchBar.value(forKey: "searchField") as? UITextField
+        
+        let searchIcon = textFieldInsideSearchBar?.leftView as! UIImageView
+        searchIcon.image = searchIcon.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        searchIcon.tintColor = UIColor.white
+    }
+    
+    @IBAction func back() {
+        
+    }
+ 
+    
+}
