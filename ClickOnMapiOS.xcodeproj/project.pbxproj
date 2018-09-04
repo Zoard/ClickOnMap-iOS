@@ -19,6 +19,7 @@
 		2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901AB213CA25600B5D001 /* RegisterViewController.swift */; };
 		2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */; };
 		2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */; };
+		2CB956DB213ECF0A00EA9E75 /* SystemMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB956DA213ECF0A00EA9E75 /* SystemMenuViewController.swift */; };
 		2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */; };
 		5A85BC11984229B6FF265DCB /* Pods_ClickOnMapiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0114A0C69CF09948282F2FD8 /* Pods_ClickOnMapiOSTests.framework */; };
 		E7B03D902D868690A205EB92 /* Pods_ClickOnMapiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B208C355BA68DBC61E64BEDD /* Pods_ClickOnMapiOS.framework */; };
@@ -62,6 +63,7 @@
 		2C9901AB213CA25600B5D001 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewController.swift; sourceTree = "<group>"; };
 		2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewCell.swift; sourceTree = "<group>"; };
+		2CB956DA213ECF0A00EA9E75 /* SystemMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMenuViewController.swift; sourceTree = "<group>"; };
 		2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FFDAB5FE6F2D6B3C8B5C5AD /* Pods-ClickOnMapiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickOnMapiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickOnMapiOSUITests/Pods-ClickOnMapiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6C871C3637214B7F87535B8B /* Pods-ClickOnMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickOnMapiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickOnMapiOS/Pods-ClickOnMapiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		2C7BA2F120C34A1E009FE671 /* ClickOnMapiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2CB956D8213ECEA600EA9E75 /* System Menu */,
 				2C9901A1213C844000B5D001 /* Model */,
 				2C99019E213C822D00B5D001 /* Hub */,
 				2C9901A4213C8DF800B5D001 /* Login */,
@@ -244,6 +247,22 @@
 			isa = PBXGroup;
 			children = (
 				2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2CB956D8213ECEA600EA9E75 /* System Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2CB956D9213ECED700EA9E75 /* Controller */,
+			);
+			path = "System Menu";
+			sourceTree = "<group>";
+		};
+		2CB956D9213ECED700EA9E75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2CB956DA213ECF0A00EA9E75 /* SystemMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -485,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7BA2F520C34A1E009FE671 /* HubViewController.swift in Sources */,
+				2CB956DB213ECF0A00EA9E75 /* SystemMenuViewController.swift in Sources */,
 				2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */,
 				2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */,
 				2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */,
