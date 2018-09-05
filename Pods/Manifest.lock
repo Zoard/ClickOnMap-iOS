@@ -1,16 +1,29 @@
 PODS:
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
   - SkyFloatingLabelTextField (3.5.2)
 
 DEPENDENCIES:
+  - GoogleMaps
+  - GooglePlaces
   - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GoogleMaps
+    - GooglePlaces
     - SkyFloatingLabelTextField
 
 SPEC CHECKSUMS:
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   SkyFloatingLabelTextField: f0672b67cd0e86abda946c0dc3b2fe8580767dbb
 
-PODFILE CHECKSUM: 2e3e297ddc02a01ea77fdf31aca93728cbea7347
+PODFILE CHECKSUM: 4da8599fb917af23c3be3a5b4b7a3834287a790f
 
 COCOAPODS: 1.5.3

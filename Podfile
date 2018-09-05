@@ -7,6 +7,8 @@ target 'ClickOnMapiOS' do
 
   # Pods for ClickOnMapiOS
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
   target 'ClickOnMapiOSTests' do
     inherit! :search_paths

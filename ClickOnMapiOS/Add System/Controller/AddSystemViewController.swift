@@ -11,8 +11,12 @@ import Foundation
 
 class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var systemSearchBar: UISearchBar!
     @IBOutlet weak var addSystemTableView: UITableView!
+    
+    //MARK: - Attributes
     
     let vgiSystems: Array<VGISystem> = [VGISystem(address: "192.168.1.1", name: "Cidadão Viçosa",
                                                   description: "Sistema para a Cidade de Viçosa",
@@ -23,6 +27,7 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     
     var searchList: Array<VGISystem> = []
     
+    //MARK: - View Life Cycle
     
     override func viewDidLoad() {
         self.addSystemTableView.dataSource = self
@@ -39,6 +44,8 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
+    
+    //MARK: - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.searchList.count
@@ -58,6 +65,8 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 130 : 150
     }
     
+    //MARK: - Methods
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.searchList = self.vgiSystems
         if searchText != "" {
@@ -76,6 +85,8 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         searchIcon.image = searchIcon.image?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         searchIcon.tintColor = UIColor.white
     }
+    
+    //MARK: - Actions
     
     @IBAction func back() {
         

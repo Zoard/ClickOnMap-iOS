@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1969BB321BA3634BBE50E294ADA097CA /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AB6AF7BE4547CE64DE5711633CFFC0 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
-		1B8FA59565D2D307B8B295D3FA09F340 /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC73AA8035BD4108AD320A107A91F85C /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		330491929AA6BA0E6C6F34377965922A /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 477402675ED0A2988A6B58AC17AAFFA7 /* SkyFloatingLabelTextField-dummy.m */; };
+		1969BB321BA3634BBE50E294ADA097CA /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8027C6364BBD87D98F5B0701359799C /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		1B8FA59565D2D307B8B295D3FA09F340 /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4022ECB80C198E7B0713C8A1C2D47A64 /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		330491929AA6BA0E6C6F34377965922A /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E0CA23FCB3E16F47CD71A119657AD /* SkyFloatingLabelTextField-dummy.m */; };
 		34A96404EFC800B3AFAA32ADB2381F91 /* Pods-ClickOnMapiOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D374D6E5E95DB3FF21B1FC36F199B803 /* Pods-ClickOnMapiOSTests-dummy.m */; };
 		397562BEC8DB998892BEBE5E044CCFEA /* Pods-ClickOnMapiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E529C404293FBCD50B4B8E7B2C4BEAF /* Pods-ClickOnMapiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D9EE3592AB91C517479118EFF73F244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		4CFCEA440ADA76343357B36F0655248F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		5BD6ED71584155F1927C3CDDE6F02F7D /* Pods-ClickOnMapiOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE8A885467D58DDE693CC42956AEAC1 /* Pods-ClickOnMapiOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70094DC80711B30F07105B4738D998C8 /* Pods-ClickOnMapiOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9065C05FF4D3F5F1CE3BDBA9D9704D6 /* Pods-ClickOnMapiOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EC6B3CF859AC97CF1B74F38F4BAB694 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEECCA755E56BD7670ACA5B8FDE8C49 /* UITextField+fixCaretPosition.swift */; };
-		A73E12E5EBDC799C7BE54F8526637DDC /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2FD3B444C15779258A1E4254154328 /* SkyFloatingLabelTextField.swift */; };
+		8EC6B3CF859AC97CF1B74F38F4BAB694 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D069F8E0B1FD269C085BDFFF69A6F5C2 /* UITextField+fixCaretPosition.swift */; };
+		A73E12E5EBDC799C7BE54F8526637DDC /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74033B58A6BA2A0A4563F98E554B4D /* SkyFloatingLabelTextField.swift */; };
 		B24FE308ED39DC5A49FC64409422C70B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		B6DB52489B9655F85BAD9BDE3EC2092D /* Pods-ClickOnMapiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E277EEAB60895A39B72C184931D0046 /* Pods-ClickOnMapiOS-dummy.m */; };
 		C6A38A27793C11FFCB824EF01989257E /* Pods-ClickOnMapiOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DBD25DDED029E5338FCFCF9C9402B /* Pods-ClickOnMapiOSUITests-dummy.m */; };
@@ -50,44 +50,50 @@
 
 /* Begin PBXFileReference section */
 		08C578FFD1453C9BCB2F60E7C68E377A /* Pods-ClickOnMapiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		0A1E0CA23FCB3E16F47CD71A119657AD /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
 		0DE8A885467D58DDE693CC42956AEAC1 /* Pods-ClickOnMapiOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClickOnMapiOSUITests-umbrella.h"; sourceTree = "<group>"; };
 		0F4C363D15FD8599267DB7359B06251D /* Pods-ClickOnMapiOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOS-frameworks.sh"; sourceTree = "<group>"; };
 		0FD488939B639941A2A1E85605A79EF2 /* Pods_ClickOnMapiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClickOnMapiOSUITests.framework; path = "Pods-ClickOnMapiOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18AB6AF7BE4547CE64DE5711633CFFC0 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		1A15B75776D6166F701B61487B71CBAE /* Pods_ClickOnMapiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClickOnMapiOSTests.framework; path = "Pods-ClickOnMapiOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D2387ED78FF8621E5BB0B26782F7F9B /* Pods-ClickOnMapiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClickOnMapiOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		1F9CEE2679AB9167C5B6DAEBEDE11B4D /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
 		24C84DE4B3599D578E28E0C04ED55854 /* Pods-ClickOnMapiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClickOnMapiOS.modulemap"; sourceTree = "<group>"; };
 		260ECDA26486268090ED5B948A7B1D48 /* Pods-ClickOnMapiOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClickOnMapiOSUITests.modulemap"; sourceTree = "<group>"; };
 		2BF97B233B6AE52894212E2344FE8F99 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F3DD3730BE35BBC34528CC3A2D2A239 /* Pods-ClickOnMapiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E0DF761B984190A9A97FBCF8CF03269 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		3E277EEAB60895A39B72C184931D0046 /* Pods-ClickOnMapiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClickOnMapiOS-dummy.m"; sourceTree = "<group>"; };
-		477402675ED0A2988A6B58AC17AAFFA7 /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
+		4022ECB80C198E7B0713C8A1C2D47A64 /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
+		423094DC2EB96FFAC864EDE647A5EA59 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		437CFCB87395BE9A7F1562D4AD885A1E /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
 		4E529C404293FBCD50B4B8E7B2C4BEAF /* Pods-ClickOnMapiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClickOnMapiOS-umbrella.h"; sourceTree = "<group>"; };
 		529DBD25DDED029E5338FCFCF9C9402B /* Pods-ClickOnMapiOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClickOnMapiOSUITests-dummy.m"; sourceTree = "<group>"; };
+		5473E4B3D6E6355EFBC539D09D7E8C21 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5A965C80D5C91023A8EF363A2165757B /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		5DD73B3AF31FA49547122A95419C0537 /* Pods-ClickOnMapiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5EA7DA4F41C248272600D7A0D559A739 /* Pods-ClickOnMapiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61B05C49F250CF05BC536E5D7C9A6DB6 /* Pods-ClickOnMapiOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSTests-resources.sh"; sourceTree = "<group>"; };
 		62DAB8A0E4FEF65F6B5ECAF2248E6874 /* Pods-ClickOnMapiOSUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSUITests-resources.sh"; sourceTree = "<group>"; };
 		6FDF145F7A323CB3D7B8AC9D389643AF /* Pods-ClickOnMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOS.release.xcconfig"; sourceTree = "<group>"; };
-		8547A24E961A2A286801CCA0B57DA15D /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
 		8FB6B99DFE7605D5809970E26C0CE797 /* Pods-ClickOnMapiOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClickOnMapiOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9324CD4C5FD5C83B2FA172490056FC2B /* Pods-ClickOnMapiOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSUITests-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96021B73AB3076CE469755681DF3DADF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A06FE292DE0E71762C7C831DED66037 /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
 		9A9DAD4168ADC71A28427A57C1C29143 /* Pods-ClickOnMapiOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClickOnMapiOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A1C5D5E99D45A8F5860C6F85FFE36079 /* Pods-ClickOnMapiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClickOnMapiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A5002F41FDB7AAF268B6EAC57167AAC2 /* Pods-ClickOnMapiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClickOnMapiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B50A54ACD1B9159D8192581DD326975E /* Pods-ClickOnMapiOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ClickOnMapiOSTests.modulemap"; sourceTree = "<group>"; };
-		CC73AA8035BD4108AD320A107A91F85C /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
-		CF536E2A36AF5426B119EA4A20475CFD /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
+		C5E678011198A741D9CF410B78962EA6 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		CC2E82E055C8B260B49D154A0E607D94 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		CF74033B58A6BA2A0A4563F98E554B4D /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		D069F8E0B1FD269C085BDFFF69A6F5C2 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+fixCaretPosition.swift"; path = "Sources/UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		D1BDB2B7A9B8C60E53D0B40A023498CF /* Pods-ClickOnMapiOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClickOnMapiOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D2A3C74AD510B97C708EDBC0ADDE182D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D374D6E5E95DB3FF21B1FC36F199B803 /* Pods-ClickOnMapiOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClickOnMapiOSTests-dummy.m"; sourceTree = "<group>"; };
-		D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
 		D5B8632AD4838E6A70E209CFB8CFA47F /* Pods_ClickOnMapiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClickOnMapiOS.framework; path = "Pods-ClickOnMapiOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC2FD3B444C15779258A1E4254154328 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		D8027C6364BBD87D98F5B0701359799C /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		DC9C215C45A159465D601956B2877FC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFEECCA755E56BD7670ACA5B8FDE8C49 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+fixCaretPosition.swift"; path = "Sources/UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		E98A48A739C1D50AC79E40240B0B8F94 /* Pods-ClickOnMapiOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClickOnMapiOSTests-frameworks.sh"; sourceTree = "<group>"; };
 		EC6055C3E043CD6099152556F1CFEFD9 /* Pods-ClickOnMapiOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClickOnMapiOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F9065C05FF4D3F5F1CE3BDBA9D9704D6 /* Pods-ClickOnMapiOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClickOnMapiOSTests-umbrella.h"; sourceTree = "<group>"; };
@@ -132,6 +138,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E159DB7F803AA5638713DD240D9C893 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				20874BE7033F4C8F2F216D11F8219766 /* Frameworks */,
+				74755FF58B86F91421D05486265CB946 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		20874BE7033F4C8F2F216D11F8219766 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E0DF761B984190A9A97FBCF8CF03269 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30AF46E90485E65413F60A0E55D7A77B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC2E82E055C8B260B49D154A0E607D94 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		35B3088F6BCC530E9D22979819471179 /* Pods-ClickOnMapiOSTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,26 +182,23 @@
 			path = "Target Support Files/Pods-ClickOnMapiOSTests";
 			sourceTree = "<group>";
 		};
-		3E538C50B5FBAB3A28B0BDDB5EEAA44A /* Pods */ = {
+		498B5CE2DFF9C1E2B856CC822CDC458F /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				BE06ED5906FCC1C2AA7EDA322B1D832D /* SkyFloatingLabelTextField */,
+				B3BB832E8C8C8A10A6ABC3DBD6AC6098 /* Frameworks */,
+				30AF46E90485E65413F60A0E55D7A77B /* Resources */,
 			);
-			name = Pods;
+			name = Maps;
 			sourceTree = "<group>";
 		};
-		4CB2F19FE17F98D8D75BDB493855D972 /* Support Files */ = {
+		504E637D391081B8590066DB792EDCF3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				96021B73AB3076CE469755681DF3DADF /* Info.plist */,
-				CF536E2A36AF5426B119EA4A20475CFD /* SkyFloatingLabelTextField.modulemap */,
-				D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */,
-				477402675ED0A2988A6B58AC17AAFFA7 /* SkyFloatingLabelTextField-dummy.m */,
-				8547A24E961A2A286801CCA0B57DA15D /* SkyFloatingLabelTextField-prefix.pch */,
-				CC73AA8035BD4108AD320A107A91F85C /* SkyFloatingLabelTextField-umbrella.h */,
+				951901EEDA5E1A8B41D52BE801926E44 /* GoogleMaps */,
+				1E159DB7F803AA5638713DD240D9C893 /* GooglePlaces */,
+				62BB29E89E2B743A33AB31955BE0F9FF /* SkyFloatingLabelTextField */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SkyFloatingLabelTextField";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		526B34267BC60AA152135925D6317212 /* Targets Support Files */ = {
@@ -190,15 +219,61 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		5F856B2745B19886E93CAA78CCFFA393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5E678011198A741D9CF410B78962EA6 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62BB29E89E2B743A33AB31955BE0F9FF /* SkyFloatingLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				CF74033B58A6BA2A0A4563F98E554B4D /* SkyFloatingLabelTextField.swift */,
+				D8027C6364BBD87D98F5B0701359799C /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				D069F8E0B1FD269C085BDFFF69A6F5C2 /* UITextField+fixCaretPosition.swift */,
+				D287904A6197E923ABEDD4B96A2C5BFC /* Support Files */,
+			);
+			name = SkyFloatingLabelTextField;
+			path = SkyFloatingLabelTextField;
+			sourceTree = "<group>";
+		};
+		74755FF58B86F91421D05486265CB946 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5473E4B3D6E6355EFBC539D09D7E8C21 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				3E538C50B5FBAB3A28B0BDDB5EEAA44A /* Pods */,
+				504E637D391081B8590066DB792EDCF3 /* Pods */,
 				EDA65E8FB00D42FC99F4A7B6ACC67715 /* Products */,
 				526B34267BC60AA152135925D6317212 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		951901EEDA5E1A8B41D52BE801926E44 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				98199E38BF504A9429DC32B7A3B68D9D /* Base */,
+				498B5CE2DFF9C1E2B856CC822CDC458F /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		98199E38BF504A9429DC32B7A3B68D9D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5F856B2745B19886E93CAA78CCFFA393 /* Frameworks */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		9F993D2F9C50D22091FEC9EA799E839A /* Pods-ClickOnMapiOSUITests */ = {
@@ -219,6 +294,15 @@
 			path = "Target Support Files/Pods-ClickOnMapiOSUITests";
 			sourceTree = "<group>";
 		};
+		B3BB832E8C8C8A10A6ABC3DBD6AC6098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				423094DC2EB96FFAC864EDE647A5EA59 /* GoogleMaps.framework */,
+				5A965C80D5C91023A8EF363A2165757B /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,16 +311,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE06ED5906FCC1C2AA7EDA322B1D832D /* SkyFloatingLabelTextField */ = {
+		D287904A6197E923ABEDD4B96A2C5BFC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DC2FD3B444C15779258A1E4254154328 /* SkyFloatingLabelTextField.swift */,
-				18AB6AF7BE4547CE64DE5711633CFFC0 /* SkyFloatingLabelTextFieldWithIcon.swift */,
-				DFEECCA755E56BD7670ACA5B8FDE8C49 /* UITextField+fixCaretPosition.swift */,
-				4CB2F19FE17F98D8D75BDB493855D972 /* Support Files */,
+				D2A3C74AD510B97C708EDBC0ADDE182D /* Info.plist */,
+				9A06FE292DE0E71762C7C831DED66037 /* SkyFloatingLabelTextField.modulemap */,
+				1F9CEE2679AB9167C5B6DAEBEDE11B4D /* SkyFloatingLabelTextField.xcconfig */,
+				0A1E0CA23FCB3E16F47CD71A119657AD /* SkyFloatingLabelTextField-dummy.m */,
+				437CFCB87395BE9A7F1562D4AD885A1E /* SkyFloatingLabelTextField-prefix.pch */,
+				4022ECB80C198E7B0713C8A1C2D47A64 /* SkyFloatingLabelTextField-umbrella.h */,
 			);
-			name = SkyFloatingLabelTextField;
-			path = SkyFloatingLabelTextField;
+			name = "Support Files";
+			path = "../Target Support Files/SkyFloatingLabelTextField";
 			sourceTree = "<group>";
 		};
 		EC6E27AD484F8F0DBDD13A7F70001E9A /* Pods-ClickOnMapiOS */ = {
@@ -539,7 +625,7 @@
 		};
 		1CCB35EC4F7592AD8563CAAC608D1BED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */;
+			baseConfigurationReference = 1F9CEE2679AB9167C5B6DAEBEDE11B4D /* SkyFloatingLabelTextField.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -642,7 +728,7 @@
 		};
 		A3F7D6458CF2B9644BE8881CA6B7DA7E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4B41BE8D4CB4B6421A83E322438D21F /* SkyFloatingLabelTextField.xcconfig */;
+			baseConfigurationReference = 1F9CEE2679AB9167C5B6DAEBEDE11B4D /* SkyFloatingLabelTextField.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
