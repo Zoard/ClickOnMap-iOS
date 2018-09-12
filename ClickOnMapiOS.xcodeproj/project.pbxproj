@@ -11,6 +11,10 @@
 		2C15F21D2140957C0073F7DF /* PendingCollaborationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15F21C2140957C0073F7DF /* PendingCollaborationsViewController.swift */; };
 		2C15F21F2140990D0073F7DF /* PendingCollaborationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15F21E2140990D0073F7DF /* PendingCollaborationsTableViewCell.swift */; };
 		2C15F22121409A9A0073F7DF /* Collaboration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15F22021409A9A0073F7DF /* Collaboration.swift */; };
+		2C5E59FB2148B58600241984 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FA2148B58600241984 /* Tile.swift */; };
+		2C5E59FD2148B64A00241984 /* AddTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FC2148B64A00241984 /* AddTile.swift */; };
+		2C5E59FF2148B80B00241984 /* SystemTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FE2148B80B00241984 /* SystemTile.swift */; };
+		2C5E5A022148C46100241984 /* AddSystemTileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E5A012148C46100241984 /* AddSystemTileDelegate.swift */; };
 		2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */; };
 		2C7BA2F520C34A1E009FE671 /* HubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F420C34A1E009FE671 /* HubViewController.swift */; };
 		2C7BA2FA20C34A1E009FE671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F920C34A1E009FE671 /* Assets.xcassets */; };
@@ -23,6 +27,8 @@
 		2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901AB213CA25600B5D001 /* RegisterViewController.swift */; };
 		2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */; };
 		2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */; };
+		2C99EC8721489D0B00026630 /* CollaborationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99EC8521489D0B00026630 /* CollaborationViewController.swift */; };
+		2C99EC8821489D0B00026630 /* CollaborationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C99EC8621489D0B00026630 /* CollaborationViewController.xib */; };
 		2CB956DB213ECF0A00EA9E75 /* SystemMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB956DA213ECF0A00EA9E75 /* SystemMenuViewController.swift */; };
 		2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */; };
 		5A85BC11984229B6FF265DCB /* Pods_ClickOnMapiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0114A0C69CF09948282F2FD8 /* Pods_ClickOnMapiOSTests.framework */; };
@@ -53,6 +59,10 @@
 		2C15F21C2140957C0073F7DF /* PendingCollaborationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingCollaborationsViewController.swift; sourceTree = "<group>"; };
 		2C15F21E2140990D0073F7DF /* PendingCollaborationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingCollaborationsTableViewCell.swift; sourceTree = "<group>"; };
 		2C15F22021409A9A0073F7DF /* Collaboration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collaboration.swift; sourceTree = "<group>"; };
+		2C5E59FA2148B58600241984 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		2C5E59FC2148B64A00241984 /* AddTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTile.swift; sourceTree = "<group>"; };
+		2C5E59FE2148B80B00241984 /* SystemTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTile.swift; sourceTree = "<group>"; };
+		2C5E5A012148C46100241984 /* AddSystemTileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemTileDelegate.swift; sourceTree = "<group>"; };
 		2C7BA2EF20C34A1E009FE671 /* ClickOnMapiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickOnMapiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7BA2F420C34A1E009FE671 /* HubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +81,8 @@
 		2C9901AB213CA25600B5D001 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewController.swift; sourceTree = "<group>"; };
 		2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewCell.swift; sourceTree = "<group>"; };
+		2C99EC8521489D0B00026630 /* CollaborationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationViewController.swift; sourceTree = "<group>"; };
+		2C99EC8621489D0B00026630 /* CollaborationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollaborationViewController.xib; sourceTree = "<group>"; };
 		2CB956DA213ECF0A00EA9E75 /* SystemMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMenuViewController.swift; sourceTree = "<group>"; };
 		2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FFDAB5FE6F2D6B3C8B5C5AD /* Pods-ClickOnMapiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickOnMapiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickOnMapiOSUITests/Pods-ClickOnMapiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +164,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		2C5E5A002148C42000241984 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2C5E5A012148C46100241984 /* AddSystemTileDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		2C7BA2E620C34A1E009FE671 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +197,7 @@
 		2C7BA2F120C34A1E009FE671 /* ClickOnMapiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2C99EC8221489C4F00026630 /* Collaboration */,
 				2C15F219214095480073F7DF /* Pending Collaborations */,
 				2C15F2152140829F0073F7DF /* Map */,
 				2CB956D8213ECEA600EA9E75 /* System Menu */,
@@ -184,6 +205,7 @@
 				2C9901A4213C8DF800B5D001 /* Login */,
 				2C9901A9213CA23300B5D001 /* Register */,
 				2C9901AD213CAD3F00B5D001 /* Add System */,
+				2C5E5A002148C42000241984 /* Delegate */,
 				2C9901A1213C844000B5D001 /* Model */,
 				2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */,
 				2C7BA2F920C34A1E009FE671 /* Assets.xcassets */,
@@ -242,6 +264,9 @@
 			children = (
 				2C9901A2213C845600B5D001 /* VGISystem.swift */,
 				2C15F22021409A9A0073F7DF /* Collaboration.swift */,
+				2C5E59FA2148B58600241984 /* Tile.swift */,
+				2C5E59FC2148B64A00241984 /* AddTile.swift */,
+				2C5E59FE2148B80B00241984 /* SystemTile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +326,31 @@
 				2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C99EC8221489C4F00026630 /* Collaboration */ = {
+			isa = PBXGroup;
+			children = (
+				2C99EC8321489C8300026630 /* Controller */,
+				2C99EC8421489C9100026630 /* View */,
+			);
+			path = Collaboration;
+			sourceTree = "<group>";
+		};
+		2C99EC8321489C8300026630 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C99EC8521489D0B00026630 /* CollaborationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C99EC8421489C9100026630 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C99EC8621489D0B00026630 /* CollaborationViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2CB956D8213ECEA600EA9E75 /* System Menu */ = {
@@ -454,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C99EC8821489D0B00026630 /* CollaborationViewController.xib in Resources */,
 				2C7BA2FD20C34A1E009FE671 /* LaunchScreen.storyboard in Resources */,
 				2C99019D213C811F00B5D001 /* Main.storyboard in Resources */,
 				2C7BA2FA20C34A1E009FE671 /* Assets.xcassets in Resources */,
@@ -577,17 +628,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7BA2F520C34A1E009FE671 /* HubViewController.swift in Sources */,
+				2C5E59FD2148B64A00241984 /* AddTile.swift in Sources */,
 				2CB956DB213ECF0A00EA9E75 /* SystemMenuViewController.swift in Sources */,
 				2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */,
 				2C15F217214082C50073F7DF /* MapViewController.swift in Sources */,
 				2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */,
 				2C15F21D2140957C0073F7DF /* PendingCollaborationsViewController.swift in Sources */,
+				2C5E59FF2148B80B00241984 /* SystemTile.swift in Sources */,
 				2C15F22121409A9A0073F7DF /* Collaboration.swift in Sources */,
 				2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */,
+				2C5E5A022148C46100241984 /* AddSystemTileDelegate.swift in Sources */,
 				2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */,
 				2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */,
 				2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */,
 				2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */,
+				2C5E59FB2148B58600241984 /* Tile.swift in Sources */,
+				2C99EC8721489D0B00026630 /* CollaborationViewController.swift in Sources */,
 				2C15F21F2140990D0073F7DF /* PendingCollaborationsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

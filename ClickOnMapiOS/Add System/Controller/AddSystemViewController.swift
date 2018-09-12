@@ -26,6 +26,7 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
                                                   color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0)]
     
     var searchList: Array<VGISystem> = []
+    var delegate: AddSystemTileDelegate?
     
     //MARK: - View Life Cycle
     
@@ -59,6 +60,16 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selected = self.searchList[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        loginController.selectedVGISystem = selected
+        loginController.delegate = self.delegate
+        
+        navigationController?.pushViewController(loginController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

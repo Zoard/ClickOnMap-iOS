@@ -19,10 +19,17 @@ class SystemMenuViewController : UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var lastCollaborationLabel: UILabel!
     
+    //MARK: - Attributes
+    
+    var selectedVGISystem: VGISystem?
+    
     
     //MARK: - View Life Cycle
     
     override func viewDidLoad() {
+        
+        configureLayout()
+        
         super.viewDidLoad()
     }
     
@@ -30,9 +37,29 @@ class SystemMenuViewController : UIViewController {
         return UIStatusBarStyle.lightContent
     }
     
+    //MARK: - Methods
+    
+    func configureLayout() {
+        
+        guard let vgiSystem = selectedVGISystem else {
+            print("Algum erro para o Log")
+            return
+        }
+        
+        self.systemNameLabel.text = vgiSystem.name
+        self.systemDescriptionTextView.text = vgiSystem.description
+        self.latitudeLabel.text = String(vgiSystem.latX)
+        self.longitudeLabel.text = String(vgiSystem.lngX)
+        self.locationLabel.text = "Viçosa/MG"
+        self.lastCollaborationLabel.text = "07/09/2018"
+        
+    }
+    
     //MARK: - Actions
     
     @IBAction func backToHub() {
+        
+        navigationController?.popViewController(animated: true)
         
     }
     

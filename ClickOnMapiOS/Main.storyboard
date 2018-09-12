@@ -13,7 +13,7 @@
         <!--Hub View Controller-->
         <scene sceneID="fRy-U1-C5n">
             <objects>
-                <viewController id="yA7-Oz-1XL" customClass="HubViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Hub" id="yA7-Oz-1XL" customClass="HubViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nmf-5t-mOg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,18 +76,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HT8-Oy-ftp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YWZ-ka-psp"/>
                     <connections>
                         <outlet property="hubCollectionView" destination="oa9-JT-3LO" id="pIe-1e-ApA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryL-jD-0G6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1029" y="57"/>
+            <point key="canvasLocation" x="-159" y="-149"/>
         </scene>
         <!--Add System View Controller-->
         <scene sceneID="jD6-Jj-LdV">
             <objects>
-                <viewController id="RFq-4X-QtF" customClass="AddSystemViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSystem" id="RFq-4X-QtF" customClass="AddSystemViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NlA-KT-fmT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,12 +175,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VO-Mv-gmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="530"/>
+            <point key="canvasLocation" x="-159" y="594"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="dFR-Vt-Acn">
             <objects>
-                <viewController id="VsH-t8-HoW" customClass="LoginViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="VsH-t8-HoW" customClass="LoginViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mKa-kA-R9X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -327,6 +328,14 @@
                                     <action selector="register" destination="VsH-t8-HoW" eventType="touchUpInside" id="NNs-67-3RA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yee-Cc-vKW">
+                                <rect key="frame" x="16" y="34" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="close" destination="VsH-t8-HoW" eventType="touchUpInside" id="Xuf-hL-kgr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" image="YES"/>
@@ -341,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Byl-be-MCb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="529"/>
+            <point key="canvasLocation" x="743" y="594"/>
         </scene>
         <!--Mapa-->
         <scene sceneID="YWt-VM-fTI">
@@ -365,7 +374,7 @@
         <!--Menu-->
         <scene sceneID="Nik-cq-9X1">
             <objects>
-                <viewController id="jSV-lV-MmP" customClass="SystemMenuViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SystemMenu" id="jSV-lV-MmP" customClass="SystemMenuViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wQJ-Q4-0CT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -501,18 +510,19 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="mUn-Vt-swn" kind="relationship" relationship="rootViewController" id="g2j-yv-PBy"/>
+                        <segue destination="yA7-Oz-1XL" kind="relationship" relationship="rootViewController" id="rdK-4J-KXd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fIJ-RM-iIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="-520"/>
+            <point key="canvasLocation" x="-1163" y="-150"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WrL-4G-OMC">
             <objects>
-                <tabBarController id="mUn-Vt-swn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="VGISystem" id="mUn-Vt-swn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WYA-Zd-9tV"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="uBL-Dv-PvA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -612,7 +622,7 @@
         <!--Register View Controller-->
         <scene sceneID="mNv-4C-1XN">
             <objects>
-                <viewController id="EwG-XM-u3o" customClass="RegisterViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Register" id="EwG-XM-u3o" customClass="RegisterViewController" customModule="ClickOnMapiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J4N-qA-2kJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -780,6 +790,9 @@
                                 <rect key="frame" x="16" y="34" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="login" destination="EwG-XM-u3o" eventType="touchUpInside" id="dVW-15-mcq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -794,7 +807,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fl4-9w-fUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="529"/>
+            <point key="canvasLocation" x="1757" y="594"/>
         </scene>
     </scenes>
     <resources>
@@ -803,6 +816,7 @@
         <image name="bg" width="750" height="1334"/>
         <image name="bg-1" width="750" height="380"/>
         <image name="button_bg" width="750" height="120"/>
+        <image name="close" width="38" height="37"/>
         <image name="header" width="750" height="380"/>
         <image name="home" width="24" height="24"/>
         <image name="line" width="750" height="2"/>

@@ -9,14 +9,24 @@
 import UIKit
 import SkyFloatingLabelTextField
 
+
 class RegisterViewController : UIViewController {
+    
+    //MARK: - Outlets
     
     @IBOutlet weak var usernameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordConfirmTextField: SkyFloatingLabelTextField!
     
+    //MARK: - Attributes
+    
+    var selectedVGISystem: VGISystem?
+    
+    //MARK: - View Life Cycle
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
     }
     
@@ -24,8 +34,16 @@ class RegisterViewController : UIViewController {
         return UIStatusBarStyle.lightContent
     }
     
+    
+    //MARK: - Actions
+    
     @IBAction func register() {
-        
+        //Implement
     }
+    
+    @IBAction func login() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     
 }
