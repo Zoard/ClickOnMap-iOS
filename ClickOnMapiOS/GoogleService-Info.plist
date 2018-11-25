@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>501625421475-dnl3ucjmcoq5bipb6hhktam03cgnqa9v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.501625421475-dnl3ucjmcoq5bipb6hhktam03cgnqa9v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA6Io4Edu4lMRn2LYTrlBrgolyH8ieS1Ac</string>
+	<key>GCM_SENDER_ID</key>
+	<string>501625421475</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ZoardGeocze.ClickOnMapiOS</string>
+	<key>PROJECT_ID</key>
+	<string>fir-demo-a79b8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fir-demo-a79b8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:501625421475:ios:a65705e2f0424499</string>
+	<key>DATABASE_URL</key>
+	<string>https://fir-demo-a79b8.firebaseio.com</string>
+</dict>
+</plist>

@@ -11,24 +11,25 @@ import Foundation
 
 class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    //MARK: - Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var systemSearchBar: UISearchBar!
     @IBOutlet weak var addSystemTableView: UITableView!
     
-    //MARK: - Attributes
+    // MARK: - Attributes
     
-    let vgiSystems: Array<VGISystem> = [VGISystem(address: "192.168.1.1", name: "Cidadão Viçosa",
+    /*let vgiSystems: Array<VGISystem> = [VGISystem(address: "192.168.1.1", name: "Cidadão Viçosa",
                                                   description: "Sistema para a Cidade de Viçosa",
                                                   color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0),
                                         VGISystem(address: "192.168.1.1", name: "Gota D'agua",
                                                   description: "Sistema para evitar desperdício de água no estado de Minas Gerais",
-                                                  color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0)]
+                                                  color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0)]*/
     
+    var vgiSystems: Array<VGISystem> = []
     var searchList: Array<VGISystem> = []
     var delegate: AddSystemTileDelegate?
     
-    //MARK: - View Life Cycle
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         self.addSystemTableView.dataSource = self
@@ -38,6 +39,7 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         self.searchList = self.vgiSystems
         
         changeSearchBarAttributes()
+        requestAvailabeVGISystems()
         
         super.viewDidLoad()
     }
@@ -46,7 +48,7 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         return UIStatusBarStyle.lightContent
     }
     
-    //MARK: - TableView
+    // MARK: - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.searchList.count
@@ -76,12 +78,32 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 130 : 150
     }
     
-    //MARK: - Methods
+    // MARK: - Web Services
+    
+    func requestAvailabeVGISystemsResponse(_ response: VGISystemDataResponse?) {
+        
+        guard let vgiSystemsResponse = response?.vgiSystems! else {
+            print("ENTROU AQUI")
+            return
+        }
+        
+        self.searchList = vgiSystemsResponse
+        self.addSystemTableView.reloadData()
+        
+    }
+    
+    func requestAvailabeVGISystems() {
+        
+        VGISystemService().requestVGISystems(completionHandler: requestAvailabeVGISystemsResponse(_:))
+        
+    }
+    
+    // MARK: - Methods
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.searchList = self.vgiSystems
         if searchText != "" {
-            let filteredList = self.searchList.filter { $0.name.lowercased().contains(searchText.lowercased())}
+            let filteredList = self.searchList.filter { ($0.name?.lowercased().contains(searchText.lowercased()))!}
             self.searchList = filteredList
         }
         
@@ -97,10 +119,10 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         searchIcon.tintColor = UIColor.white
     }
     
-    //MARK: - Actions
+    // MARK: - Actions
     
     @IBAction func back() {
-        
+        navigationController?.popViewController(animated: true)
     }
  
     

@@ -81,8 +81,8 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
             
             let systemTile = tile as! SystemTile
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let menuController = storyboard.instantiateViewController(withIdentifier: "SystemMenu") as! SystemMenuViewController
-            menuController.selectedVGISystem = systemTile.vgiSystem
+            let menuController = storyboard.instantiateViewController(withIdentifier: "VGISystem") as! UITabBarController
+            //menuController.selectedVGISystem = systemTile.vgiSystem
             navigationController?.pushViewController(menuController, animated: true)
             
         }
@@ -90,7 +90,7 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-20, height: 160) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
+        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2, height: 160) : CGSize(width: collectionView.bounds.width/2, height: 250)
     }
     
     //MARK: - Delegate

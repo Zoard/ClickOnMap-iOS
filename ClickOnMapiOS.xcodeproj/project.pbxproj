@@ -29,7 +29,24 @@
 		2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */; };
 		2C99EC8721489D0B00026630 /* CollaborationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99EC8521489D0B00026630 /* CollaborationViewController.swift */; };
 		2C99EC8821489D0B00026630 /* CollaborationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C99EC8621489D0B00026630 /* CollaborationViewController.xib */; };
+		2CA408342189DF5C00A2BC7F /* ClickOnMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA408332189DF5C00A2BC7F /* ClickOnMapAPI.swift */; };
+		2CA408362189E75800A2BC7F /* EventCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA408352189E75800A2BC7F /* EventCategory.swift */; };
+		2CA408382189E7D100A2BC7F /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA408372189E7D100A2BC7F /* EventType.swift */; };
+		2CA4083A2189EBBC00A2BC7F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA408392189EBBC00A2BC7F /* User.swift */; };
+		2CA4083C2189F2B300A2BC7F /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA4083B2189F2B300A2BC7F /* FirebaseService.swift */; };
+		2CA4083E2189F49600A2BC7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4083D2189F49500A2BC7F /* GoogleService-Info.plist */; };
+		2CA408402189FA5200A2BC7F /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA4083F2189FA5200A2BC7F /* GoogleUtilities.framework */; };
+		2CA40842218A00E400A2BC7F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA40841218A00E400A2BC7F /* UserService.swift */; };
 		2CB956DB213ECF0A00EA9E75 /* SystemMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB956DA213ECF0A00EA9E75 /* SystemMenuViewController.swift */; };
+		2CC8C98C21A7089A008D4C2C /* DefaultDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C98B21A7089A008D4C2C /* DefaultDataResponse.swift */; };
+		2CC8C98E21A9998E008D4C2C /* VGISystemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C98D21A9998E008D4C2C /* VGISystemService.swift */; };
+		2CC8C99321A9AB33008D4C2C /* VGISystemDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C99221A9AB33008D4C2C /* VGISystemDataResponse.swift */; };
+		2CC8C99521A9B6A2008D4C2C /* CollaborationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C99421A9B6A2008D4C2C /* CollaborationService.swift */; };
+		2CC8C99A21AA1026008D4C2C /* FirebaseMessagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C99921AA1026008D4C2C /* FirebaseMessagingDelegate.swift */; };
+		2CC8C99D21AA1318008D4C2C /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C99C21AA1318008D4C2C /* DateExtensions.swift */; };
+		2CC8C9A021AA3109008D4C2C /* EventCategoryDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C99F21AA3109008D4C2C /* EventCategoryDataResponse.swift */; };
+		2CC8C9A321AA366C008D4C2C /* UserDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C9A221AA366C008D4C2C /* UserDataResponse.swift */; };
+		2CC8C9A521AA400B008D4C2C /* CollaborationsDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C9A421AA400B008D4C2C /* CollaborationsDataResponse.swift */; };
 		2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */; };
 		5A85BC11984229B6FF265DCB /* Pods_ClickOnMapiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0114A0C69CF09948282F2FD8 /* Pods_ClickOnMapiOSTests.framework */; };
 		E7B03D902D868690A205EB92 /* Pods_ClickOnMapiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B208C355BA68DBC61E64BEDD /* Pods_ClickOnMapiOS.framework */; };
@@ -83,7 +100,24 @@
 		2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewCell.swift; sourceTree = "<group>"; };
 		2C99EC8521489D0B00026630 /* CollaborationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationViewController.swift; sourceTree = "<group>"; };
 		2C99EC8621489D0B00026630 /* CollaborationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollaborationViewController.xib; sourceTree = "<group>"; };
+		2CA408332189DF5C00A2BC7F /* ClickOnMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickOnMapAPI.swift; sourceTree = "<group>"; };
+		2CA408352189E75800A2BC7F /* EventCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategory.swift; sourceTree = "<group>"; };
+		2CA408372189E7D100A2BC7F /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		2CA408392189EBBC00A2BC7F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2CA4083B2189F2B300A2BC7F /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		2CA4083D2189F49500A2BC7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CA4083F2189FA5200A2BC7F /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA40841218A00E400A2BC7F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		2CB956DA213ECF0A00EA9E75 /* SystemMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMenuViewController.swift; sourceTree = "<group>"; };
+		2CC8C98B21A7089A008D4C2C /* DefaultDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataResponse.swift; sourceTree = "<group>"; };
+		2CC8C98D21A9998E008D4C2C /* VGISystemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGISystemService.swift; sourceTree = "<group>"; };
+		2CC8C99221A9AB33008D4C2C /* VGISystemDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGISystemDataResponse.swift; sourceTree = "<group>"; };
+		2CC8C99421A9B6A2008D4C2C /* CollaborationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationService.swift; sourceTree = "<group>"; };
+		2CC8C99921AA1026008D4C2C /* FirebaseMessagingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMessagingDelegate.swift; sourceTree = "<group>"; };
+		2CC8C99C21AA1318008D4C2C /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		2CC8C99F21AA3109008D4C2C /* EventCategoryDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryDataResponse.swift; sourceTree = "<group>"; };
+		2CC8C9A221AA366C008D4C2C /* UserDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataResponse.swift; sourceTree = "<group>"; };
+		2CC8C9A421AA400B008D4C2C /* CollaborationsDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationsDataResponse.swift; sourceTree = "<group>"; };
 		2CEA7F8920DA0B9700392A5A /* HubCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubCollectionViewCell.swift; sourceTree = "<group>"; };
 		3FFDAB5FE6F2D6B3C8B5C5AD /* Pods-ClickOnMapiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickOnMapiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickOnMapiOSUITests/Pods-ClickOnMapiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6C871C3637214B7F87535B8B /* Pods-ClickOnMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClickOnMapiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClickOnMapiOS/Pods-ClickOnMapiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA408402189FA5200A2BC7F /* GoogleUtilities.framework in Frameworks */,
 				E7B03D902D868690A205EB92 /* Pods_ClickOnMapiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +232,9 @@
 		2C7BA2F120C34A1E009FE671 /* ClickOnMapiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2CA408322189DF3200A2BC7F /* Web Service */,
+				2CC8C99821AA1000008D4C2C /* Firebase */,
+				2CC8C99B21AA12A3008D4C2C /* Utils */,
 				2C99EC8221489C4F00026630 /* Collaboration */,
 				2C15F219214095480073F7DF /* Pending Collaborations */,
 				2C15F2152140829F0073F7DF /* Map */,
@@ -212,6 +250,7 @@
 				2C99019C213C811F00B5D001 /* Main.storyboard */,
 				2C7BA2FB20C34A1E009FE671 /* LaunchScreen.storyboard */,
 				2C7BA2FE20C34A1E009FE671 /* Info.plist */,
+				2CA4083D2189F49500A2BC7F /* GoogleService-Info.plist */,
 			);
 			path = ClickOnMapiOS;
 			sourceTree = "<group>";
@@ -262,8 +301,9 @@
 		2C9901A1213C844000B5D001 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C9901A2213C845600B5D001 /* VGISystem.swift */,
-				2C15F22021409A9A0073F7DF /* Collaboration.swift */,
+				2CC8C9A121AA340E008D4C2C /* User */,
+				2CC8C99E21AA307C008D4C2C /* Collaboration */,
+				2CC8C98F21A9AAC6008D4C2C /* VGISystem */,
 				2C5E59FA2148B58600241984 /* Tile.swift */,
 				2C5E59FC2148B64A00241984 /* AddTile.swift */,
 				2C5E59FE2148B80B00241984 /* SystemTile.swift */,
@@ -353,6 +393,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2CA408322189DF3200A2BC7F /* Web Service */ = {
+			isa = PBXGroup;
+			children = (
+				2CA408332189DF5C00A2BC7F /* ClickOnMapAPI.swift */,
+				2CA4083B2189F2B300A2BC7F /* FirebaseService.swift */,
+				2CC8C98D21A9998E008D4C2C /* VGISystemService.swift */,
+				2CA40841218A00E400A2BC7F /* UserService.swift */,
+				2CC8C99421A9B6A2008D4C2C /* CollaborationService.swift */,
+				2CC8C98B21A7089A008D4C2C /* DefaultDataResponse.swift */,
+			);
+			path = "Web Service";
+			sourceTree = "<group>";
+		};
 		2CB956D8213ECEA600EA9E75 /* System Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,9 +422,56 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		2CC8C98F21A9AAC6008D4C2C /* VGISystem */ = {
+			isa = PBXGroup;
+			children = (
+				2C9901A2213C845600B5D001 /* VGISystem.swift */,
+				2CC8C99221A9AB33008D4C2C /* VGISystemDataResponse.swift */,
+			);
+			path = VGISystem;
+			sourceTree = "<group>";
+		};
+		2CC8C99821AA1000008D4C2C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				2CC8C99921AA1026008D4C2C /* FirebaseMessagingDelegate.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2CC8C99B21AA12A3008D4C2C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2CC8C99C21AA1318008D4C2C /* DateExtensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2CC8C99E21AA307C008D4C2C /* Collaboration */ = {
+			isa = PBXGroup;
+			children = (
+				2C15F22021409A9A0073F7DF /* Collaboration.swift */,
+				2CC8C9A421AA400B008D4C2C /* CollaborationsDataResponse.swift */,
+				2CA408352189E75800A2BC7F /* EventCategory.swift */,
+				2CA408372189E7D100A2BC7F /* EventType.swift */,
+				2CC8C99F21AA3109008D4C2C /* EventCategoryDataResponse.swift */,
+			);
+			path = Collaboration;
+			sourceTree = "<group>";
+		};
+		2CC8C9A121AA340E008D4C2C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2CA408392189EBBC00A2BC7F /* User.swift */,
+				2CC8C9A221AA366C008D4C2C /* UserDataResponse.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		96177FDFB609116E5BC5F650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CA4083F2189FA5200A2BC7F /* GoogleUtilities.framework */,
 				B208C355BA68DBC61E64BEDD /* Pods_ClickOnMapiOS.framework */,
 				0114A0C69CF09948282F2FD8 /* Pods_ClickOnMapiOSTests.framework */,
 				B4C502256293411FD8ADEDA2 /* Pods_ClickOnMapiOSUITests.framework */,
@@ -460,7 +560,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Zoárd Geöcze";
 				TargetAttributes = {
 					2C7BA2EE20C34A1E009FE671 = {
@@ -506,6 +606,7 @@
 			files = (
 				2C99EC8821489D0B00026630 /* CollaborationViewController.xib in Resources */,
 				2C7BA2FD20C34A1E009FE671 /* LaunchScreen.storyboard in Resources */,
+				2CA4083E2189F49600A2BC7F /* GoogleService-Info.plist in Resources */,
 				2C99019D213C811F00B5D001 /* Main.storyboard in Resources */,
 				2C7BA2FA20C34A1E009FE671 /* Assets.xcassets in Resources */,
 			);
@@ -591,11 +692,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ClickOnMapiOS/Pods-ClickOnMapiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -628,23 +741,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7BA2F520C34A1E009FE671 /* HubViewController.swift in Sources */,
+				2CC8C9A521AA400B008D4C2C /* CollaborationsDataResponse.swift in Sources */,
+				2CC8C99D21AA1318008D4C2C /* DateExtensions.swift in Sources */,
 				2C5E59FD2148B64A00241984 /* AddTile.swift in Sources */,
 				2CB956DB213ECF0A00EA9E75 /* SystemMenuViewController.swift in Sources */,
 				2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */,
 				2C15F217214082C50073F7DF /* MapViewController.swift in Sources */,
+				2CA408342189DF5C00A2BC7F /* ClickOnMapAPI.swift in Sources */,
 				2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */,
+				2CA408382189E7D100A2BC7F /* EventType.swift in Sources */,
 				2C15F21D2140957C0073F7DF /* PendingCollaborationsViewController.swift in Sources */,
 				2C5E59FF2148B80B00241984 /* SystemTile.swift in Sources */,
+				2CA4083C2189F2B300A2BC7F /* FirebaseService.swift in Sources */,
+				2CC8C99A21AA1026008D4C2C /* FirebaseMessagingDelegate.swift in Sources */,
+				2CA4083A2189EBBC00A2BC7F /* User.swift in Sources */,
 				2C15F22121409A9A0073F7DF /* Collaboration.swift in Sources */,
+				2CA408362189E75800A2BC7F /* EventCategory.swift in Sources */,
 				2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */,
+				2CC8C98C21A7089A008D4C2C /* DefaultDataResponse.swift in Sources */,
 				2C5E5A022148C46100241984 /* AddSystemTileDelegate.swift in Sources */,
+				2CC8C99321A9AB33008D4C2C /* VGISystemDataResponse.swift in Sources */,
 				2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */,
 				2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */,
 				2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */,
+				2CC8C9A021AA3109008D4C2C /* EventCategoryDataResponse.swift in Sources */,
 				2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */,
+				2CC8C9A321AA366C008D4C2C /* UserDataResponse.swift in Sources */,
+				2CA40842218A00E400A2BC7F /* UserService.swift in Sources */,
 				2C5E59FB2148B58600241984 /* Tile.swift in Sources */,
 				2C99EC8721489D0B00026630 /* CollaborationViewController.swift in Sources */,
 				2C15F21F2140990D0073F7DF /* PendingCollaborationsTableViewCell.swift in Sources */,
+				2CC8C99521A9B6A2008D4C2C /* CollaborationService.swift in Sources */,
+				2CC8C98E21A9998E008D4C2C /* VGISystemService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,6 +833,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -712,6 +841,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -762,6 +892,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -769,6 +900,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
