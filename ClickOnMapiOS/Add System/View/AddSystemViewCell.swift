@@ -16,7 +16,7 @@ class AddSystemViewCell : UITableViewCell {
     func configureCellFor(_ vgiSystem: VGISystem) {
         
         self.systemNameLabel.text = vgiSystem.name
-        self.systemDescriptionTextView.text = vgiSystem.description
+        self.systemDescriptionTextView.text = vgiSystem.systemDescription
         
         self.layer.borderWidth = 0.5
         self.layer.borderColor = UIColor(red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor

@@ -21,9 +21,7 @@ class SystemMenuViewController : UIViewController {
     
     //MARK: - Attributes
     
-    var selectedVGISystem: VGISystem = VGISystem(address: "192.168.1.1", name: "Cidadão Viçosa",
-                                                 description: "Sistema para a Cidade de Viçosa",
-                                                 color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0)
+    var selectedVGISystem: VGISystem?
     
     
     //MARK: - View Life Cycle
@@ -43,17 +41,15 @@ class SystemMenuViewController : UIViewController {
     
     func configureLayout() {
         
-        /*guard let vgiSystem = selectedVGISystem else {
+        guard let vgiSystem = self.selectedVGISystem else {
             print("Algum erro para o Log")
             return
-        }*/
-        
-        let vgiSystem = self.selectedVGISystem
-        
+        }
+                
         self.systemNameLabel.text = vgiSystem.name
-        self.systemDescriptionTextView.text = vgiSystem.description
-        self.latitudeLabel.text = String(vgiSystem.latX!)
-        self.longitudeLabel.text = String(vgiSystem.lngX!)
+        self.systemDescriptionTextView.text = vgiSystem.systemDescription
+        self.latitudeLabel.text = String(vgiSystem.latX)
+        self.longitudeLabel.text = String(vgiSystem.lngX)
         self.locationLabel.text = "Viçosa/MG"
         self.lastCollaborationLabel.text = "07/09/2018"
         

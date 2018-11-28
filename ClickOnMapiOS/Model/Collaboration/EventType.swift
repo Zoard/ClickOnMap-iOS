@@ -8,17 +8,19 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class EventType: Mappable {
+class EventType: Object, Mappable {
     
-    var id: Int?
-    var description: String?
+    @objc dynamic var id: Int = 0
+    @objc dynamic var typeDescription: String = ""
     
-    required init?(map: Map) {
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
-        id <- map["id"]
-        description <- map["description"]
+        self.id <- map["id"]
+        self.typeDescription <- map["description"]
     }
 }

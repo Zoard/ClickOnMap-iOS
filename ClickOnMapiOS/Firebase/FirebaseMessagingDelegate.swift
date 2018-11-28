@@ -34,7 +34,7 @@ extension AppDelegate : MessagingDelegate {
     }
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-        
+        //TODO: Tratar notificações
     }
     
 }

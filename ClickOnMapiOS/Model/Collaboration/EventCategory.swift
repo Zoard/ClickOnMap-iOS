@@ -8,19 +8,21 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class EventCategory : Mappable {
+class EventCategory : Object, Mappable {
     
-    var id: Int?
-    var description: String?
-    var eventType: Array<EventType>?
+    @objc dynamic var id: Int = 0
+    @objc dynamic var categoryDescription: String = ""
+    var eventType: List<EventType>?
     
-    required init?(map: Map) {
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
         self.id <- map["id"]
-        self.description <- map["description"]
+        self.categoryDescription <- map["description"]
         self.eventType <- map["eventTypes"]
     }
 }

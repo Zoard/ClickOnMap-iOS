@@ -18,13 +18,6 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     
     // MARK: - Attributes
     
-    /*let vgiSystems: Array<VGISystem> = [VGISystem(address: "192.168.1.1", name: "Cidadão Viçosa",
-                                                  description: "Sistema para a Cidade de Viçosa",
-                                                  color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0),
-                                        VGISystem(address: "192.168.1.1", name: "Gota D'agua",
-                                                  description: "Sistema para evitar desperdício de água no estado de Minas Gerais",
-                                                  color: UIColor.red, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0)]*/
-    
     var vgiSystems: Array<VGISystem> = []
     var searchList: Array<VGISystem> = []
     var delegate: AddSystemTileDelegate?
@@ -32,6 +25,9 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
+        
+        self.hideKeyboardWhenTappedAround()
+        
         self.addSystemTableView.dataSource = self
         self.addSystemTableView.delegate = self
         self.systemSearchBar.delegate = self
@@ -66,13 +62,19 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selected = self.searchList[indexPath.row]
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         let loginController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
         loginController.selectedVGISystem = selected
         loginController.delegate = self.delegate
         
-        navigationController?.pushViewController(loginController, animated: true)
+        if let navigation = self.navigationController {
+            navigation.pushViewController(loginController, animated: true)
+
+        }
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 130 : 150
@@ -81,19 +83,25 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     // MARK: - Web Services
     
     func requestAvailabeVGISystemsResponse(_ response: VGISystemDataResponse?) {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         guard let vgiSystemsResponse = response?.vgiSystems! else {
             print("ENTROU AQUI")
             return
         }
+
+        for vgiSystemResponse in vgiSystemsResponse {
+            if let vgiSystem = VGISystem.search(for: vgiSystemResponse) {
+                self.searchList.append(vgiSystem)
+            }
+        }
         
-        self.searchList = vgiSystemsResponse
         self.addSystemTableView.reloadData()
         
     }
     
     func requestAvailabeVGISystems() {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        print("ENTROU AQUI")
         VGISystemService().requestVGISystems(completionHandler: requestAvailabeVGISystemsResponse(_:))
         
     }
@@ -103,7 +111,7 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.searchList = self.vgiSystems
         if searchText != "" {
-            let filteredList = self.searchList.filter { ($0.name?.lowercased().contains(searchText.lowercased()))!}
+            let filteredList = self.searchList.filter { ($0.name.lowercased().contains(searchText.lowercased()))}
             self.searchList = filteredList
         }
         
@@ -122,7 +130,9 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     // MARK: - Actions
     
     @IBAction func back() {
-        navigationController?.popViewController(animated: true)
+        if let navigation = self.navigationController {
+            navigation.popViewController(animated: true)
+        }
     }
  
     

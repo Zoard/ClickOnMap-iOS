@@ -11,18 +11,18 @@ import ObjectMapper
 
 class DefaultDataResponse : Mappable {
     
-    var tag: String?
-    var success: Int?
-    var error: Int?
-    var error_msg: String?
+    var tag: String = ""
+    var success: Int = 0
+    var error: Int = 0
+    var error_msg: String = ""
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-        tag <- map["tag"]
-        success <- map["success"]
-        error <- map["error"]
-        error_msg <- map["error_msg"]
+        self.tag <- map["tag"]
+        self.success <- map["success"]
+        self.error <- map["error"]
+        self.error_msg <- map["error_msg"]
     }
 }

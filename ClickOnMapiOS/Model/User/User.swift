@@ -8,18 +8,27 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
 
-class User : Mappable {
+class User : Object, Mappable {
     
-    var id: String = ""
-    var email: String = ""
-    var name: String = ""
-    var password: String = ""
-    var type: Character = "C"
-    var registerDate: String = ""
+    // MARK: Attributes
     
+    @objc dynamic var id: String = ""
+    @objc dynamic var email: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var password: String = ""
+    @objc dynamic var type: String = ""
+    @objc dynamic var registerDate: String = ""
     
-    required init?(map: Map) {
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    // MARK: - Initializers
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
     
     func mapping(map: Map) {
@@ -30,4 +39,18 @@ class User : Mappable {
         type <- map["type"]
         registerDate <- map["registerDate"]
     }
+    
+    // MARK: - Methods
+    
+    func setAttributes(id: String, email: String, name: String, password: String, type: String,
+                       registerDate: String) {
+        self.id = id
+        self.email = email
+        self.name = name
+        self.password = password
+        self.type = type
+        self.registerDate = registerDate
+        
+    }
+    
 }

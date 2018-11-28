@@ -14,7 +14,7 @@ import Firebase
 class UserService : ClickOnMapAPI, UserAPI {
     
     override init(baseUrl: String) {
-        let newBaseUrl = baseUrl + "mobile/"
+        let newBaseUrl = baseUrl + "/mobile/"
         super.init(baseUrl: newBaseUrl)
     }
     
@@ -47,18 +47,22 @@ class UserService : ClickOnMapAPI, UserAPI {
 
     }
     
-    func verifyUser(email: String, password: String, completionHandler: @escaping (DefaultDataResponse?) -> Void) {
+    func verifyUser(email: String, password: String, completionHandler: @escaping (UserDataResponse?) -> Void) {
         
         let url = self.baseUrl
-        var responseApi: DefaultDataResponse?
+        var responseApi: UserDataResponse?
         guard let fcmToken = Messaging.messaging().fcmToken else {
             return
         }
-        let parameters = ["tag" : Tag.verifyUser.rawValue, "email" : email, "password" : password,
+        print(self.baseUrl)
+        print(email)
+        print(password)
+        print(fcmToken)
+        let parameters = ["tag" : "verifyUser", "email" : email, "password" : password,
                           "firebaseKey" : fcmToken] as [String : Any]
         
         Alamofire.request(url, method: .post, parameters: parameters).responseObject {
-            (response: DataResponse<DefaultDataResponse>) in
+            (response: DataResponse<UserDataResponse>) in
             
             switch response.result {
             case .success:

@@ -13,7 +13,9 @@ target 'ClickOnMapiOS' do
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'ObjectMapper', '~> 3.3'
   pod 'Firebase/Core'
-  pod 'Firebase/Messaging'    
+  pod 'Firebase/Messaging'
+  pod 'RealmSwift'
+  pod 'ObjectMapper+Realm'
 
   target 'ClickOnMapiOSTests' do
     inherit! :search_paths

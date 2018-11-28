@@ -22,4 +22,4 @@ class UserDataResponse : DefaultDataResponse {
         self.user <- map["user"]
     }
     
-}
+} 

@@ -52,7 +52,7 @@ protocol UserAPI {
     
     func sendUser(user: User, completionHandler: @escaping(DefaultDataResponse?) -> Void)
     
-    func verifyUser(email: String, password: String, completionHandler: @escaping(DefaultDataResponse?) -> Void)
+    func verifyUser(email: String, password: String, completionHandler: @escaping(UserDataResponse?) -> Void)
     
     func requestUser(email: String, completionHandler: @escaping(UserDataResponse?) -> Void)
     

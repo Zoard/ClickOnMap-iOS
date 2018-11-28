@@ -21,6 +21,12 @@
 		2C7BA2FD20C34A1E009FE671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7BA2FB20C34A1E009FE671 /* LaunchScreen.storyboard */; };
 		2C7BA30820C34A1F009FE671 /* ClickOnMapiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA30720C34A1F009FE671 /* ClickOnMapiOSTests.swift */; };
 		2C7BA31320C34A1F009FE671 /* ClickOnMapiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA31220C34A1F009FE671 /* ClickOnMapiOSUITests.swift */; };
+		2C802F1B21AAE3A100A74DCF /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C802F1A21AAE3A100A74DCF /* Realm.framework */; };
+		2C802F1D21AAE3A100A74DCF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C802F1C21AAE3A100A74DCF /* RealmSwift.framework */; };
+		2C802F2421AAFD0200A74DCF /* FCMToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C802F2321AAFD0200A74DCF /* FCMToken.swift */; };
+		2C802F2721AB261800A74DCF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C802F2621AB261800A74DCF /* Alert.swift */; };
+		2C802F2921AB2F9A00A74DCF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C802F2821AB2F9A00A74DCF /* UIViewControllerExtensions.swift */; };
+		2C802F2D21AB70FC00A74DCF /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C802F2C21AB70FC00A74DCF /* LoginDelegate.swift */; };
 		2C99019D213C811F00B5D001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C99019C213C811F00B5D001 /* Main.storyboard */; };
 		2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901A2213C845600B5D001 /* VGISystem.swift */; };
 		2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901A7213C90D800B5D001 /* LoginViewController.swift */; };
@@ -92,6 +98,12 @@
 		2C7BA30E20C34A1F009FE671 /* ClickOnMapiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickOnMapiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7BA31220C34A1F009FE671 /* ClickOnMapiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickOnMapiOSUITests.swift; sourceTree = "<group>"; };
 		2C7BA31420C34A1F009FE671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C802F1A21AAE3A100A74DCF /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C802F1C21AAE3A100A74DCF /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C802F2321AAFD0200A74DCF /* FCMToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMToken.swift; sourceTree = "<group>"; };
+		2C802F2621AB261800A74DCF /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		2C802F2821AB2F9A00A74DCF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		2C802F2C21AB70FC00A74DCF /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
 		2C99019C213C811F00B5D001 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2C9901A2213C845600B5D001 /* VGISystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGISystem.swift; sourceTree = "<group>"; };
 		2C9901A7213C90D800B5D001 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +146,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C802F1B21AAE3A100A74DCF /* Realm.framework in Frameworks */,
+				2C802F1D21AAE3A100A74DCF /* RealmSwift.framework in Frameworks */,
 				2CA408402189FA5200A2BC7F /* GoogleUtilities.framework in Frameworks */,
 				E7B03D902D868690A205EB92 /* Pods_ClickOnMapiOS.framework in Frameworks */,
 			);
@@ -203,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				2C5E5A012148C46100241984 /* AddSystemTileDelegate.swift */,
+				2C802F2C21AB70FC00A74DCF /* LoginDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -273,6 +288,24 @@
 			path = ClickOnMapiOSUITests;
 			sourceTree = "<group>";
 		};
+		2C802F2221AAFCEB00A74DCF /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				2C802F2321AAFD0200A74DCF /* FCMToken.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2C802F2521AB093500A74DCF /* Tile */ = {
+			isa = PBXGroup;
+			children = (
+				2C5E59FA2148B58600241984 /* Tile.swift */,
+				2C5E59FC2148B64A00241984 /* AddTile.swift */,
+				2C5E59FE2148B80B00241984 /* SystemTile.swift */,
+			);
+			path = Tile;
+			sourceTree = "<group>";
+		};
 		2C99019E213C822D00B5D001 /* Hub */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,12 +334,11 @@
 		2C9901A1213C844000B5D001 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C802F2521AB093500A74DCF /* Tile */,
+				2C802F2221AAFCEB00A74DCF /* Firebase */,
 				2CC8C9A121AA340E008D4C2C /* User */,
 				2CC8C99E21AA307C008D4C2C /* Collaboration */,
 				2CC8C98F21A9AAC6008D4C2C /* VGISystem */,
-				2C5E59FA2148B58600241984 /* Tile.swift */,
-				2C5E59FC2148B64A00241984 /* AddTile.swift */,
-				2C5E59FE2148B80B00241984 /* SystemTile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +475,8 @@
 			isa = PBXGroup;
 			children = (
 				2CC8C99C21AA1318008D4C2C /* DateExtensions.swift */,
+				2C802F2621AB261800A74DCF /* Alert.swift */,
+				2C802F2821AB2F9A00A74DCF /* UIViewControllerExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -471,6 +505,8 @@
 		96177FDFB609116E5BC5F650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C802F1A21AAE3A100A74DCF /* Realm.framework */,
+				2C802F1C21AAE3A100A74DCF /* RealmSwift.framework */,
 				2CA4083F2189FA5200A2BC7F /* GoogleUtilities.framework */,
 				B208C355BA68DBC61E64BEDD /* Pods_ClickOnMapiOS.framework */,
 				0114A0C69CF09948282F2FD8 /* Pods_ClickOnMapiOSTests.framework */,
@@ -696,7 +732,10 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -706,7 +745,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -744,6 +786,7 @@
 				2CC8C9A521AA400B008D4C2C /* CollaborationsDataResponse.swift in Sources */,
 				2CC8C99D21AA1318008D4C2C /* DateExtensions.swift in Sources */,
 				2C5E59FD2148B64A00241984 /* AddTile.swift in Sources */,
+				2C802F2921AB2F9A00A74DCF /* UIViewControllerExtensions.swift in Sources */,
 				2CB956DB213ECF0A00EA9E75 /* SystemMenuViewController.swift in Sources */,
 				2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */,
 				2C15F217214082C50073F7DF /* MapViewController.swift in Sources */,
@@ -751,6 +794,7 @@
 				2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */,
 				2CA408382189E7D100A2BC7F /* EventType.swift in Sources */,
 				2C15F21D2140957C0073F7DF /* PendingCollaborationsViewController.swift in Sources */,
+				2C802F2D21AB70FC00A74DCF /* LoginDelegate.swift in Sources */,
 				2C5E59FF2148B80B00241984 /* SystemTile.swift in Sources */,
 				2CA4083C2189F2B300A2BC7F /* FirebaseService.swift in Sources */,
 				2CC8C99A21AA1026008D4C2C /* FirebaseMessagingDelegate.swift in Sources */,
@@ -758,9 +802,11 @@
 				2C15F22121409A9A0073F7DF /* Collaboration.swift in Sources */,
 				2CA408362189E75800A2BC7F /* EventCategory.swift in Sources */,
 				2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */,
+				2C802F2421AAFD0200A74DCF /* FCMToken.swift in Sources */,
 				2CC8C98C21A7089A008D4C2C /* DefaultDataResponse.swift in Sources */,
 				2C5E5A022148C46100241984 /* AddSystemTileDelegate.swift in Sources */,
 				2CC8C99321A9AB33008D4C2C /* VGISystemDataResponse.swift in Sources */,
+				2C802F2721AB261800A74DCF /* Alert.swift in Sources */,
 				2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */,
 				2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */,
 				2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */,

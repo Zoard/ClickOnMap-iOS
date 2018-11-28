@@ -10,24 +10,27 @@ import UIKit
 
 class HubViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AddSystemTileDelegate {
     
-    //MARK: - Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var hubCollectionView: UICollectionView!
     
-    //MARK: - Attributes
+    // MARK: - Attributes
     
-    /*var vgiSystem: VGISystem = VGISystem(address: "192.168.1.1", name: "Teste", description: "Sistema de Teste",
-                                         color: UIColor.blue, collaborations: 0, latX: 0.0, latY: 0.0, lngX: 0.0, lngY: 0.0)*/
+    var tiles: Array<Tile> = []
     
-    var tiles: Array<Tile> = [AddTile(name: "add")]
+    // MARK: - Realm DB
     
-    //MARK: - View Life Cycle
+    let dataBase = RealmDB()
+    
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hubCollectionView.dataSource = self
         hubCollectionView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
+        updateHubTiles()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +42,7 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         return UIStatusBarStyle.lightContent
     }
     
-    //MARK: - CollectionView
+    // MARK: - CollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.tiles.count
@@ -64,26 +67,14 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         let tile = self.tiles[indexPath.row]
         
         if tile is AddTile {
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let addSystemcontroller = storyboard.instantiateViewController(withIdentifier: "AddSystem") as! AddSystemViewController
-            addSystemcontroller.delegate = self
-            navigationController?.pushViewController(addSystemcontroller, animated: true)
-            print("Ce ta doido...")
-            
+            addSystemNavigate()
         } else {
-            /*guard let systemTile = tile, systemTile.vgiSystem.available == true else {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let loginController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-                //REVER ISSO AQUI, TENHO QUE ADICIONAR UM VGISystem para o LOGIN
-                navigationController?.pushViewController(loginController, animated: true)
-            }*/
-            
             let systemTile = tile as! SystemTile
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let menuController = storyboard.instantiateViewController(withIdentifier: "VGISystem") as! UITabBarController
-            //menuController.selectedVGISystem = systemTile.vgiSystem
-            navigationController?.pushViewController(menuController, animated: true)
+            if systemTile.available {
+                systemMenuNavigate(to: systemTile)
+            } else {
+                loginNavigate()
+            }
             
         }
         
@@ -93,11 +84,55 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2, height: 160) : CGSize(width: collectionView.bounds.width/2, height: 250)
     }
     
+    // MARK: - Methods
+    
+    func addSystemNavigate() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let addSystemcontroller = storyboard.instantiateViewController(withIdentifier: "AddSystem") as! AddSystemViewController
+        addSystemcontroller.delegate = self
+        if let navigation = self.navigationController {
+            navigation.pushViewController(addSystemcontroller, animated: true)
+        }
+    }
+    
+    func systemMenuNavigate(to systemTile: SystemTile) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let menuController = storyboard.instantiateViewController(withIdentifier: "VGISystem") as! UITabBarController
+        if let systemMenuViewController = menuController.viewControllers![0] as? SystemMenuViewController {
+            systemMenuViewController.selectedVGISystem = systemTile.vgiSystem
+        }
+        if let navigation = self.navigationController {
+            navigation.pushViewController(menuController, animated: true)
+        }
+    }
+    
+    func loginNavigate() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        loginViewController.delegate = self
+        if let navigation = self.navigationController {
+            navigation.pushViewController(loginViewController, animated: true)
+        }
+    }
+    
+    func updateHubTiles() {
+        self.tiles.removeAll()
+        
+        let vgiSystems = VGISystem.all()
+        print(vgiSystems.count)
+        for vgiSystem in vgiSystems {
+            self.tiles.append(SystemTile(vgiSystem: vgiSystem, available: !vgiSystem.sync))
+        }
+        self.tiles.append(AddTile(name: "add"))
+        self.hubCollectionView.reloadData()
+    }
+    
     //MARK: - Delegate
     
-    func add(_ systemTile: SystemTile) {
-        self.tiles.append(systemTile)
-        self.hubCollectionView.reloadData()
+    func add(_ vgiSystem: VGISystem) {
+        dataBase.create(object: vgiSystem)
+        updateHubTiles()
     }
 
 }

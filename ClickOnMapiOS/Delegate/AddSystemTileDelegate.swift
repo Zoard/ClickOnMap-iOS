@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AddSystemTileDelegate {
-    func add(_ systemTile: SystemTile)
+    func add(_ vgiSystem: VGISystem)
 }

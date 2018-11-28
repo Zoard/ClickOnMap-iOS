@@ -8,48 +8,64 @@
 
 import UIKit
 import ObjectMapper
+import RealmSwift
+import ObjectMapper_Realm
 
-class VGISystem : Mappable {
+class VGISystem : Object, Mappable {
     
-    var address: String?
-    var name: String?
-    var description: String?
-    var color: UIColor?
-    //var category: Array<EventCategory>?
-    var collaborations: Int?
-    var latX: Double?
-    var latY: Double?
-    var lngX: Double?
-    var lngY: Double?
+    // MARK: - Attributes
     
-    required init?(map: Map) {
+    @objc dynamic var address: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var systemDescription: String = ""
+    @objc dynamic var color: String = ""
+    var category: List<EventCategory>?
+    @objc dynamic var collaborations: Int = 0
+    @objc dynamic var user: User?
+    @objc dynamic var latX: Double = 0.0
+    @objc dynamic var latY: Double = 0.0
+    @objc dynamic var lngX: Double = 0.0
+    @objc dynamic var lngY: Double = 0.0
+    @objc dynamic var hasSession: Bool = false
+    @objc dynamic var sync: Bool = false
     
+    override static func primaryKey() -> String? {
+        return "address"
     }
     
-    init(address: String, name: String, description: String, color: UIColor, collaborations: Int, latX: Double, latY: Double, lngX: Double, lngY: Double) {
-        self.address = address
-        self.name = name
-        self.description = description
-        self.color = color
-        self.collaborations = collaborations
-        self.latX = latX
-        self.latY = latY
-        self.lngX = lngX
-        self.lngY = lngY
+    // MARK: Initializers
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
-    
-    
     
     func mapping(map: Map) {
         self.address <- map["address"]
         self.name <- map["name"]
-        self.description <- map["description"]
+        self.systemDescription <- map["description"]
         self.color <- map["color"]
         self.collaborations <- map["collaborations"]
         self.latX <- map["latX"]
         self.latY <- map["latY"]
         self.lngX <- map["lngX"]
         self.lngY <- map["lngY"]
+    }
+    
+    // MARK: - Realm Methods
+    
+    static func add(in realm: Realm = try! Realm(), new vgiSystem: VGISystem) {
+        try! realm.write {
+            realm.add(vgiSystem)
+            try realm.commitWrite()
+        }
+    }
+    
+    static func all(in realm: Realm = try! Realm()) -> Results<VGISystem> {
+        return realm.objects(VGISystem.self)
+    }
+    
+    static func search(in realm: Realm = try! Realm(), for vgiSystem: VGISystem) -> VGISystem? {
+        return realm.object(ofType: VGISystem.self, forPrimaryKey: vgiSystem.address)
     }
     
 }
