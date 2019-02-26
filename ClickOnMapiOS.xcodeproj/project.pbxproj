@@ -14,7 +14,7 @@
 		2C5E59FB2148B58600241984 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FA2148B58600241984 /* Tile.swift */; };
 		2C5E59FD2148B64A00241984 /* AddTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FC2148B64A00241984 /* AddTile.swift */; };
 		2C5E59FF2148B80B00241984 /* SystemTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FE2148B80B00241984 /* SystemTile.swift */; };
-		2C5E5A022148C46100241984 /* AddSystemTileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E5A012148C46100241984 /* AddSystemTileDelegate.swift */; };
+		2C5E5A022148C46100241984 /* SystemTileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E5A012148C46100241984 /* SystemTileDelegate.swift */; };
 		2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */; };
 		2C7BA2F520C34A1E009FE671 /* HubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F420C34A1E009FE671 /* HubViewController.swift */; };
 		2C7BA2FA20C34A1E009FE671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F920C34A1E009FE671 /* Assets.xcassets */; };
@@ -27,6 +27,7 @@
 		2C802F2721AB261800A74DCF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C802F2621AB261800A74DCF /* Alert.swift */; };
 		2C802F2921AB2F9A00A74DCF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C802F2821AB2F9A00A74DCF /* UIViewControllerExtensions.swift */; };
 		2C802F2D21AB70FC00A74DCF /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C802F2C21AB70FC00A74DCF /* LoginDelegate.swift */; };
+		2C961B3321AECF48007D6CF6 /* MapViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C961B3221AECF48007D6CF6 /* MapViewControllerExtension.swift */; };
 		2C99019D213C811F00B5D001 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C99019C213C811F00B5D001 /* Main.storyboard */; };
 		2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901A2213C845600B5D001 /* VGISystem.swift */; };
 		2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901A7213C90D800B5D001 /* LoginViewController.swift */; };
@@ -34,7 +35,6 @@
 		2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */; };
 		2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */; };
 		2C99EC8721489D0B00026630 /* CollaborationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C99EC8521489D0B00026630 /* CollaborationViewController.swift */; };
-		2C99EC8821489D0B00026630 /* CollaborationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C99EC8621489D0B00026630 /* CollaborationViewController.xib */; };
 		2CA408342189DF5C00A2BC7F /* ClickOnMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA408332189DF5C00A2BC7F /* ClickOnMapAPI.swift */; };
 		2CA408362189E75800A2BC7F /* EventCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA408352189E75800A2BC7F /* EventCategory.swift */; };
 		2CA408382189E7D100A2BC7F /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA408372189E7D100A2BC7F /* EventType.swift */; };
@@ -85,7 +85,7 @@
 		2C5E59FA2148B58600241984 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		2C5E59FC2148B64A00241984 /* AddTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTile.swift; sourceTree = "<group>"; };
 		2C5E59FE2148B80B00241984 /* SystemTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTile.swift; sourceTree = "<group>"; };
-		2C5E5A012148C46100241984 /* AddSystemTileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemTileDelegate.swift; sourceTree = "<group>"; };
+		2C5E5A012148C46100241984 /* SystemTileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTileDelegate.swift; sourceTree = "<group>"; };
 		2C7BA2EF20C34A1E009FE671 /* ClickOnMapiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickOnMapiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7BA2F420C34A1E009FE671 /* HubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +104,7 @@
 		2C802F2621AB261800A74DCF /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2C802F2821AB2F9A00A74DCF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		2C802F2C21AB70FC00A74DCF /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
+		2C961B3221AECF48007D6CF6 /* MapViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerExtension.swift; sourceTree = "<group>"; };
 		2C99019C213C811F00B5D001 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2C9901A2213C845600B5D001 /* VGISystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGISystem.swift; sourceTree = "<group>"; };
 		2C9901A7213C90D800B5D001 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		2C9901B0213CAD8200B5D001 /* AddSystemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewController.swift; sourceTree = "<group>"; };
 		2C9901B2213CADC900B5D001 /* AddSystemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSystemViewCell.swift; sourceTree = "<group>"; };
 		2C99EC8521489D0B00026630 /* CollaborationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationViewController.swift; sourceTree = "<group>"; };
-		2C99EC8621489D0B00026630 /* CollaborationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollaborationViewController.xib; sourceTree = "<group>"; };
 		2CA408332189DF5C00A2BC7F /* ClickOnMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickOnMapAPI.swift; sourceTree = "<group>"; };
 		2CA408352189E75800A2BC7F /* EventCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategory.swift; sourceTree = "<group>"; };
 		2CA408372189E7D100A2BC7F /* EventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 		2C5E5A002148C42000241984 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				2C5E5A012148C46100241984 /* AddSystemTileDelegate.swift */,
+				2C5E5A012148C46100241984 /* SystemTileDelegate.swift */,
 				2C802F2C21AB70FC00A74DCF /* LoginDelegate.swift */,
 			);
 			path = Delegate;
@@ -404,7 +404,6 @@
 			isa = PBXGroup;
 			children = (
 				2C99EC8321489C8300026630 /* Controller */,
-				2C99EC8421489C9100026630 /* View */,
 			);
 			path = Collaboration;
 			sourceTree = "<group>";
@@ -415,14 +414,6 @@
 				2C99EC8521489D0B00026630 /* CollaborationViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		2C99EC8421489C9100026630 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2C99EC8621489D0B00026630 /* CollaborationViewController.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		2CA408322189DF3200A2BC7F /* Web Service */ = {
@@ -474,9 +465,10 @@
 		2CC8C99B21AA12A3008D4C2C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2CC8C99C21AA1318008D4C2C /* DateExtensions.swift */,
 				2C802F2621AB261800A74DCF /* Alert.swift */,
+				2CC8C99C21AA1318008D4C2C /* DateExtensions.swift */,
 				2C802F2821AB2F9A00A74DCF /* UIViewControllerExtensions.swift */,
+				2C961B3221AECF48007D6CF6 /* MapViewControllerExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -540,7 +532,7 @@
 				2C7BA2EC20C34A1E009FE671 /* Frameworks */,
 				2C7BA2ED20C34A1E009FE671 /* Resources */,
 				D5D46F69F2A1D5FCF5A0E51F /* [CP] Embed Pods Frameworks */,
-				8E06E66E59C5C9E25C36928A /* [CP] Copy Pods Resources */,
+				459DB3C3BF8FE7D16BDB2ED2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -640,7 +632,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C99EC8821489D0B00026630 /* CollaborationViewController.xib in Resources */,
 				2C7BA2FD20C34A1E009FE671 /* LaunchScreen.storyboard in Resources */,
 				2CA4083E2189F49600A2BC7F /* GoogleService-Info.plist in Resources */,
 				2C99019D213C811F00B5D001 /* Main.storyboard in Resources */,
@@ -683,7 +674,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E06E66E59C5C9E25C36928A /* [CP] Copy Pods Resources */ = {
+		459DB3C3BF8FE7D16BDB2ED2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -731,6 +722,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/NewPopMenu/PopMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -744,6 +736,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -802,9 +795,10 @@
 				2C15F22121409A9A0073F7DF /* Collaboration.swift in Sources */,
 				2CA408362189E75800A2BC7F /* EventCategory.swift in Sources */,
 				2C9901B3213CADC900B5D001 /* AddSystemViewCell.swift in Sources */,
+				2C961B3321AECF48007D6CF6 /* MapViewControllerExtension.swift in Sources */,
 				2C802F2421AAFD0200A74DCF /* FCMToken.swift in Sources */,
 				2CC8C98C21A7089A008D4C2C /* DefaultDataResponse.swift in Sources */,
-				2C5E5A022148C46100241984 /* AddSystemTileDelegate.swift in Sources */,
+				2C5E5A022148C46100241984 /* SystemTileDelegate.swift in Sources */,
 				2CC8C99321A9AB33008D4C2C /* VGISystemDataResponse.swift in Sources */,
 				2C802F2721AB261800A74DCF /* Alert.swift in Sources */,
 				2C9901AC213CA25600B5D001 /* RegisterViewController.swift in Sources */,
@@ -983,7 +977,37 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T27P2U47KX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AlamofireObjectMapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMessaging\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper+Realm\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Realm\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SkyFloatingLabelTextField\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalyticsInterop\"",
+					"${PODS_ROOT}/GoogleMaps/Maps/Frameworks",
+				);
 				INFOPLIST_FILE = ClickOnMapiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZoardGeocze.ClickOnMapiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -999,7 +1023,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T27P2U47KX;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalyticsInterop\"",
+					"${PODS_ROOT}/GoogleMaps/Maps/Frameworks",
+				);
 				INFOPLIST_FILE = ClickOnMapiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZoardGeocze.ClickOnMapiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";

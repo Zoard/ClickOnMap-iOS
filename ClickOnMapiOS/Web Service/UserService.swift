@@ -21,13 +21,22 @@ class UserService : ClickOnMapAPI, UserAPI {
     func sendUser(user: User, completionHandler: @escaping (DefaultDataResponse?) -> Void) {
         
         let url = self.baseUrl
+        print(url)
         var responseApi: DefaultDataResponse?
         guard let fcmToken = Messaging.messaging().fcmToken else {
             return
         }
+        print(fcmToken)
+        print(Tag.sendUser.rawValue)
+        print(user.email)
+        print(user.name)
+        print(user.password)
+        print(user.registerDate)
+        print(user.type)
+        
         let parameters = ["tag" : Tag.sendUser.rawValue, "email" : user.email,
                           "name" : user.name, "password" : user.password, "type" : user.type,
-                          "registerDate" : Date().serverFormat(), "firebaseKey" : fcmToken] as [String : Any]
+                          "registerDate" : user.registerDate, "firebaseKey" : fcmToken] as [String : Any]
         
         Alamofire.request(url, method: .post, parameters: parameters).responseObject {
             (response: DataResponse<DefaultDataResponse>) in
@@ -36,10 +45,12 @@ class UserService : ClickOnMapAPI, UserAPI {
             case .success:
                 responseApi = response.result.value
                 completionHandler(responseApi)
+                print("SUCCESS_SEND_USER")
                 break
                 
             case .failure:
                 completionHandler(responseApi)
+                print("FAILURE_SEND_USER")
                 break
             }
             

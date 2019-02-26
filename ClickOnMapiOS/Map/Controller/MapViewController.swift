@@ -10,11 +10,44 @@ import UIKit
 import GoogleMaps
 
 class MapViewController: UIViewController {
+    
+    // MARK: - Variables
+    
+    var selectedVGISystem: VGISystem?
+    var collaborations: Array<Collaboration> = []
+    
+    // MARK: - Map Attributes
+    
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    var mapView: GMSMapView!
+    var zoomLevel: Float = 15.0
 
     override func viewDidLoad() {
+        
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        
+        loadMap()
+        
+        if let vgiSystem = selectedVGISystem {
+            print(vgiSystem.address)
+        } else {
+            print("Nenhum sistema vgi selecionado em MapViewController")
+        }
+        
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        requestCollaborations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,20 +55,90 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func loadView() {
+    // MARK: - Google Map
+    
+    func loadMap() {
         
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: -20.7546, longitude: -42.8825, zoom: 16.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
+        let camera = GMSCameraPosition.camera(withLatitude: -20.7546,
+                                              longitude: -42.8825,
+                                              zoom: zoomLevel)
+        mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
+        mapView.settings.myLocationButton = true
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.isMyLocationEnabled = true
         
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -20.7546, longitude: -42.8825)
-        marker.title = "Viçosa"
-        marker.snippet = "Brasil"
-        marker.map = mapView
+        // Add the map to the view, hide it until we've got a location update.
+        view.addSubview(mapView)
+        mapView.isHidden = true
+        
+        insertButton()
+
+        
     }
+    
+    func populateMap() {
+        
+        mapView.clear()
+        
+        print(self.collaborations.count)
+        
+        for collab in self.collaborations {
+             let marker = GMSMarker()
+             marker.position = CLLocationCoordinate2D(latitude: Double(collab.latitude)!, longitude: Double(collab.longitude)!)
+             marker.title = collab.title
+             marker.snippet = collab.description
+             marker.map = self.mapView
+         }
+        
+    }
+    
+    func insertButton() {
+        let btn: UIButton = UIButton(frame: CGRect(x: 130, y: 439, width: 60, height: 60))
+        btn.setImage(UIImage(named: "Logo"), for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(collaborate), for: UIControlEvents.touchUpInside)
+        
+        btn.layer.shadowColor = UIColor.black.cgColor
+        btn.layer.shadowOffset = CGSize(width: 3, height: 3)
+        btn.layer.shadowRadius = 3
+        btn.layer.shadowOpacity = 0.8
+        
+        self.mapView.addSubview(btn)
+    }
+    
+    // MARK: - Web Services - Request Collaborations
+    
+    func requestCollaborationsCompletionHandler(_ response: CollaborationsDataResponse?) {
+        guard let responseData = response?.collaborations else {
+            print("It Wasn't Possible to get Collaborations")
+            return
+        }
+        
+        self.collaborations = responseData
+        populateMap()
+    }
+    
+    func requestCollaborations() {
+        
+        guard let vgiSystem = self.selectedVGISystem else {
+            print("Log")
+            return
+        }
+        
+        CollaborationService(baseUrl: vgiSystem.address).requestCollaborations(completionHandler: requestCollaborationsCompletionHandler(_:))
+    }
+    
+    // MARK: - Actions
+    
+    @objc func collaborate() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let collabViewController = storyboard.instantiateViewController(withIdentifier: "Collaboration") as! CollaborationViewController
+        if let navigation = self.navigationController {
+            collabViewController.selectedVGISystem = self.selectedVGISystem
+            navigation.pushViewController(collabViewController, animated: true)
+        }
+        
+    }
+    
 
 }

@@ -20,7 +20,7 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     
     var vgiSystems: Array<VGISystem> = []
     var searchList: Array<VGISystem> = []
-    var delegate: AddSystemTileDelegate?
+    var delegate: SystemTileDelegate?
     
     // MARK: - View Life Cycle
     
@@ -85,13 +85,14 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     func requestAvailabeVGISystemsResponse(_ response: VGISystemDataResponse?) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         guard let vgiSystemsResponse = response?.vgiSystems! else {
-            print("ENTROU AQUI")
+            print("ENTROU AQUI RESPONSE")
             return
         }
 
         for vgiSystemResponse in vgiSystemsResponse {
-            if let vgiSystem = VGISystem.search(for: vgiSystemResponse) {
-                self.searchList.append(vgiSystem)
+            print(vgiSystemResponse.name)
+            if VGISystem.search(for: vgiSystemResponse) == nil {
+                self.searchList.append(vgiSystemResponse)
             }
         }
         
@@ -101,7 +102,7 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
     
     func requestAvailabeVGISystems() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        print("ENTROU AQUI")
+        print("ENTROU AQUI REQUEST")
         VGISystemService().requestVGISystems(completionHandler: requestAvailabeVGISystemsResponse(_:))
         
     }

@@ -24,13 +24,13 @@ class Collaboration : Mappable {
     var photo: String = ""
     var video: String = ""
     var audio: String = ""
-    var latitude: Double = 0.0
-    var longitude: Double = 0.0
+    var latitude: String = ""
+    var longitude: String = ""
     
     
     init(collaborationId: Int, userId: String, userName: String, title: String, description: String, collaborationDate: String,
          categoryId:Int, categoryName: String, subcategoryId: Int , subcategoryName: String, photo: String, video: String, audio: String,
-         latitude: Double , longitude: Double) {
+         latitude: String , longitude: String) {
         
         self.collaborationId = collaborationId
         self.userId = userId

@@ -22,11 +22,8 @@ class LoginViewController : UIViewController {
     // MARK: - Attributes
     
     var selectedVGISystem: VGISystem?
-    var delegate: AddSystemTileDelegate?
+    var delegate: SystemTileDelegate?
     
-    // MARK: - Realm DB
-    
-    let dataBase = RealmDB()
     
     // MARK: - View Life Cycle
     
@@ -57,7 +54,7 @@ class LoginViewController : UIViewController {
         }
         
         if let vgiSystem = self.selectedVGISystem {
-            self.delegate?.add(vgiSystem)
+            self.delegate?.addTile(vgiSystem)
         }
         
         if let navigation = self.navigationController {

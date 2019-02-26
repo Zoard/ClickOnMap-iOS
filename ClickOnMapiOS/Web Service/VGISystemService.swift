@@ -48,8 +48,10 @@ class VGISystemService : ClickOnMapAPI, VGISystemAPI {
     func requestVGISystems(completionHandler: @escaping (VGISystemDataResponse?) -> Void) {
         
         let url = self.baseUrl + "VGISystem"
+        print(url)
         var responseApi: VGISystemDataResponse?
         let parameters = ["tag" : Tag.requestVGISystems.rawValue] as [String : Any]
+        
         Alamofire.request(url, method: .get, parameters: parameters).responseObject {
             (response: DataResponse<VGISystemDataResponse>) in
             
@@ -70,9 +72,11 @@ class VGISystemService : ClickOnMapAPI, VGISystemAPI {
     
     func requestVGISystemCategories(completionHandler: @escaping (EventCategoryDataResponse?) -> Void) {
         
-        let url = self.baseUrl + "mobile"
+        let url = self.baseUrl + "/mobile/"
         var responseApi: EventCategoryDataResponse?
         let parameters = ["tag" : Tag.requestVGISystemCategories.rawValue] as [String : Any]
+        print(url)
+        print(Tag.requestVGISystemCategories.rawValue)
         Alamofire.request(url, method: .get, parameters: parameters).responseObject {
             (response: DataResponse<EventCategoryDataResponse>) in
             

@@ -13,7 +13,7 @@ import AlamofireObjectMapper
 class CollaborationService : ClickOnMapAPI, CollaborationAPI {
     
     override init(baseUrl: String) {
-        let newBaseUrl = baseUrl + "mobile/"
+        let newBaseUrl = baseUrl + "/mobile/"
         super.init(baseUrl: newBaseUrl)
     }
     
@@ -52,7 +52,7 @@ class CollaborationService : ClickOnMapAPI, CollaborationAPI {
         var responseApi: CollaborationsDataResponse?
         let parameters = ["tag" : Tag.requestCollaborations.rawValue] as [String : Any]
         
-        Alamofire.request(url, method: .post, parameters: parameters).responseObject {
+        Alamofire.request(url, method: .get, parameters: parameters).responseObject {
             (response: DataResponse<CollaborationsDataResponse>) in
             
             switch response.result {

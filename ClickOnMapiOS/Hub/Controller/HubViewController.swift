@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import PopMenu
 
-class HubViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, AddSystemTileDelegate {
+class HubViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SystemTileDelegate {
     
     // MARK: - Outlets
     
@@ -17,17 +18,26 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
     // MARK: - Attributes
     
     var tiles: Array<Tile> = []
-    
-    // MARK: - Realm DB
-    
-    let dataBase = RealmDB()
+    let popMenuManager = PopMenuManager.default
+    var longPressTileSelected: SystemTile?
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         hubCollectionView.dataSource = self
         hubCollectionView.delegate = self
+        
+        let collectionViewLongPressGesture = UILongPressGestureRecognizer(target: self,
+                                                                          action: #selector(collectionViewLongPress(gesture:)))
+        collectionViewLongPressGesture.minimumPressDuration = 0.5
+        collectionViewLongPressGesture.delaysTouchesBegan = true
+        
+        popMenuManager.popMenuShouldDismissOnSelection = true
+        configurePopMenuActions()
+        
+        self.hubCollectionView.addGestureRecognizer(collectionViewLongPressGesture)
         // Do any additional setup after loading the view, typically from a nib.
         updateHubTiles()
         
@@ -42,7 +52,7 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         return UIStatusBarStyle.lightContent
     }
     
-    // MARK: - CollectionView
+    // MARK: - Collection View
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.tiles.count
@@ -80,8 +90,85 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         
     }
     
+    @objc func collectionViewLongPress(gesture: UILongPressGestureRecognizer) {
+        
+        if gesture.state == .recognized {
+            return
+        }
+        
+        let p = gesture.location(in: self.hubCollectionView)
+        
+        if let indexPath = self.hubCollectionView.indexPathForItem(at: p) {
+            // get the cell at indexPath (the one you long pressed)
+            let cell = self.hubCollectionView.cellForItem(at: indexPath) as! HubCollectionViewCell
+            // do stuff with the cell
+            let tile = self.tiles[indexPath.row]
+            
+            if tile is SystemTile {
+                self.longPressTileSelected = tile as? SystemTile
+                self.popMenuManager.present(sourceView: cell)
+            }
+            
+            print("Hub Collection View Index Path: \(indexPath)")
+        } else {
+            print("couldn't find index path")
+        }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2, height: 160) : CGSize(width: collectionView.bounds.width/2, height: 250)
+    }
+    
+    // MARK: - Pop Menu
+    
+    func configurePopMenuActions() {
+        
+        let sync = PopMenuDefaultAction(title: "Sincronizar", image: UIImage(named: "ic_sync"), didSelect: {action in
+            self.popMenuSync()
+        })
+        let remove = PopMenuDefaultAction(title: "Remover", image: UIImage(named: "ic_trash"), didSelect: { action in
+            self.popMenuRemove()
+        })
+        
+        self.popMenuManager.addAction(sync)
+        self.popMenuManager.addAction(remove)
+        
+    }
+    
+    func syncCompletionHandler(action: UIAlertAction) {
+        
+        guard let vgiSystem = self.longPressTileSelected?.vgiSystem else {
+            print("No VGISystem Selected")
+            return
+        }
+        
+    }
+    
+    func removeCompletionHandler(action: UIAlertAction) {
+        
+        
+    }
+    
+    func popMenuSync() {
+        Alert(controller: self).showWithHandler(cancelButtonTitle: "Cancelar", completion: syncCompletionHandler)
+        
+        print("Sync")
+    }
+    
+    func popMenuRemove() {
+        Alert(controller: self).showWithHandler(cancelButtonTitle: "Cancelar", completion: removeCompletionHandler)
+        guard let vgiSystem = self.longPressTileSelected?.vgiSystem else {
+            print("No VGISystem Selected")
+            return
+        }
+        
+        deleteTile(vgiSystem)
+        
+        let categories = EventCategory.all()
+        print("Categories Counter: \(categories.count)")
+        
+        print("Remove")
     }
     
     // MARK: - Methods
@@ -97,14 +184,25 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     func systemMenuNavigate(to systemTile: SystemTile) {
         
+        let vgiSystem = VGISystem.search(for: systemTile.vgiSystem)
+        if let categories = vgiSystem?.categories {
+            print("HUB_VIEW_CONTROLLER: HAS CATEGORIES")
+        } else {
+            print("HUB_VIEW_CONTROLLER: HAS NOT CATEGORIES")
+        }
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let menuController = storyboard.instantiateViewController(withIdentifier: "VGISystem") as! UITabBarController
         if let systemMenuViewController = menuController.viewControllers![0] as? SystemMenuViewController {
-            systemMenuViewController.selectedVGISystem = systemTile.vgiSystem
+            systemMenuViewController.selectedVGISystem = vgiSystem
+        }
+        if let mapViewController = menuController.viewControllers![1] as? MapViewController {
+            mapViewController.selectedVGISystem = vgiSystem
         }
         if let navigation = self.navigationController {
             navigation.pushViewController(menuController, animated: true)
         }
+        
     }
     
     func loginNavigate() {
@@ -128,10 +226,17 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         self.hubCollectionView.reloadData()
     }
     
-    //MARK: - Delegate
+    // MARK: - System Tile Delegate
     
-    func add(_ vgiSystem: VGISystem) {
-        dataBase.create(object: vgiSystem)
+    func addTile(_ vgiSystem: VGISystem) {
+        VGISystem.add(new: vgiSystem)
+        let categories = EventCategory.all()
+        print("Categories Counter: \(categories.count)")
+        updateHubTiles()
+    }
+    
+    func deleteTile(_ vgiSystem: VGISystem) {
+        VGISystem.delete(vgiSystem)
         updateHubTiles()
     }
 

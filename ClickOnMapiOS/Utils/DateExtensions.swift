@@ -13,7 +13,7 @@ extension Date {
     func serverFormat() -> String {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
+        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
         
         return dateFormatter.string(from: self)
         

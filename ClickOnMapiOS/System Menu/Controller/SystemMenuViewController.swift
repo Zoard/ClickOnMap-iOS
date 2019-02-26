@@ -18,6 +18,7 @@ class SystemMenuViewController : UIViewController {
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var lastCollaborationLabel: UILabel!
+    @IBOutlet weak var collaborateButton: UIButton!
     
     //MARK: - Attributes
     
@@ -30,6 +31,12 @@ class SystemMenuViewController : UIViewController {
         
         configureLayout()
         
+        if let vgiSystem = selectedVGISystem {
+            print(vgiSystem.address)
+        } else {
+            print("Nenhum sistema vgi selecionado em SystemMenuViewController")
+        }
+        
         super.viewDidLoad()
     }
     
@@ -41,27 +48,40 @@ class SystemMenuViewController : UIViewController {
     
     func configureLayout() {
         
+        collaborateButton.layer.shadowColor = UIColor.black.cgColor
+        collaborateButton.layer.shadowOffset = CGSize(width: 3, height: 3)
+        collaborateButton.layer.shadowRadius = 3
+        collaborateButton.layer.shadowOpacity = 0.8
+        
         guard let vgiSystem = self.selectedVGISystem else {
             print("Algum erro para o Log")
             return
         }
                 
         self.systemNameLabel.text = vgiSystem.name
-        self.systemDescriptionTextView.text = vgiSystem.systemDescription
-        self.latitudeLabel.text = String(vgiSystem.latX)
-        self.longitudeLabel.text = String(vgiSystem.lngX)
+        self.systemDescriptionTextView.text = vgiSystem.systemDescription + "."
+        self.latitudeLabel.text = String(-20.7546)
+        self.longitudeLabel.text = String(-42.8825)
         self.locationLabel.text = "Viçosa/MG"
-        self.lastCollaborationLabel.text = "07/09/2018"
+        self.lastCollaborationLabel.text = "28/11/2018"
         
     }
     
     //MARK: - Actions
     
     @IBAction func backToHub() {
-        
-        navigationController?.popViewController(animated: true)
-        
+        if let navigation = self.navigationController {
+            navigation.popViewController(animated: true)
+        }
     }
     
+    @IBAction func collaborate(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let collabViewController = storyboard.instantiateViewController(withIdentifier: "Collaboration") as! CollaborationViewController
+        if let navigation = self.navigationController {
+            collabViewController.selectedVGISystem = self.selectedVGISystem
+            navigation.pushViewController(collabViewController, animated: true)
+        }
+    }
     
 }

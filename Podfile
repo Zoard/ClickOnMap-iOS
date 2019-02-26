@@ -7,15 +7,16 @@ target 'ClickOnMapiOS' do
 
   # Pods for ClickOnMapiOS
   pod 'SkyFloatingLabelTextField', '~> 3.0'
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
   pod 'Alamofire', '~> 4.7'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'ObjectMapper', '~> 3.3'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
   pod 'RealmSwift'
   pod 'ObjectMapper+Realm'
+  pod 'NewPopMenu', '~> 1.1'
 
   target 'ClickOnMapiOSTests' do
     inherit! :search_paths

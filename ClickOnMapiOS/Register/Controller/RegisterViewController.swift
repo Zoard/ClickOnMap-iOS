@@ -19,11 +19,13 @@ class RegisterViewController : UIViewController {
     @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordConfirmTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var formScrollView: UIScrollView!
+    
     
     // MARK: - Attributes
     
     var selectedVGISystem: VGISystem?
-    var delegate: AddSystemTileDelegate?
+    var delegate: SystemTileDelegate?
     var registeredUser: User?
     
     // MARK: - View Life Cycle
@@ -31,6 +33,9 @@ class RegisterViewController : UIViewController {
     override func viewDidLoad() {
         
         self.hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(raiseScroll(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillShow , object: nil)
         
         super.viewDidLoad()
     }
@@ -97,7 +102,7 @@ class RegisterViewController : UIViewController {
         }
         
         vgiSystem.user = user
-        self.delegate?.add(vgiSystem)
+        self.delegate?.addTile(vgiSystem)
         
         if let navigation = self.navigationController {
             navigation.popToRootViewController(animated: true)
@@ -119,6 +124,43 @@ class RegisterViewController : UIViewController {
                                             completionHandler: sendMobyleSystemCompletionHandler(_:))
     }
     
+    // MARK: - Web Services - Request VGISystem Categories
+    
+    func requestVGISystemCategoriesCompletionHandler(_ response: EventCategoryDataResponse?) {
+        
+        guard let responseCategories = response?.categories else {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            Alert(controller: self).showWithHandler("Sem Conexão",message: "Conecte-se à uma rede e tente novamente.",
+                                                    okButtonTitle: "Tentar Novamente", cancelButtonTitle: "Cancelar",
+                                                    completion: sendUserCompletionAlert(_:))
+            return
+        }
+        
+        guard let responseData = response else {
+            return
+        }
+        
+        if (responseData.success == 1) {
+            self.selectedVGISystem?.set(new: responseCategories)            
+            sendMobileSystem()
+        } else {
+            print("Log: RegisterViewController_requestVGISystemCategoriesCompletionHandler")
+            Alert(controller: self).show("Cadastro Não Realizado", message: responseData.error_msg)
+        }
+        
+    }
+    
+    func requestVGISystemCategories() {
+        
+        guard let vgiSystem = self.selectedVGISystem else {
+            print("Log")
+            return
+        }
+        
+        VGISystemService(baseUrl: vgiSystem.address).requestVGISystemCategories(completionHandler: requestVGISystemCategoriesCompletionHandler(_:))
+        
+    }
+    
     // MARK: - Web Services - Send User
     
     func sendUserCompletionAlert(_ alert: UIAlertAction) {
@@ -128,6 +170,7 @@ class RegisterViewController : UIViewController {
     func sendUserCompletionHandler(_ response: DefaultDataResponse?) {
         
         guard let responseData = response else {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             Alert(controller: self).showWithHandler("Sem Conexão",message: "Conecte-se à uma rede e tente novamente.",
                                                     okButtonTitle: "Tentar Novamente", cancelButtonTitle: "Cancelar",
                                                     completion: sendUserCompletionAlert(_:))
@@ -135,8 +178,10 @@ class RegisterViewController : UIViewController {
         }
         
         if (responseData.success == 1) {
-            
+            requestVGISystemCategories()
         } else {
+            print(responseData.error)
+            print(responseData.error_msg)
             Alert(controller: self).show("Cadastro Não Realizado", message: responseData.error_msg)
         }
         
@@ -165,6 +210,11 @@ class RegisterViewController : UIViewController {
     }
     
     // MARK: - Actions
+    
+    @objc func raiseScroll(notification: Notification) {
+        self.formScrollView.contentSize = CGSize(width: self.formScrollView.frame.width,
+                                             height: self.formScrollView.frame.height + 320)
+    }
     
     @IBAction func register() {
         sendUser()

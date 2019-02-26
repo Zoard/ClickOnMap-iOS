@@ -8,6 +8,8 @@
 
 import Foundation
 import ObjectMapper
+import RealmSwift
+import ObjectMapper_Realm
 
 class DefaultDataResponse : Mappable {
     
