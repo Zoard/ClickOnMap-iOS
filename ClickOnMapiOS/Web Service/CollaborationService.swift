@@ -8,19 +8,19 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 import AlamofireObjectMapper
 
 class CollaborationService : ClickOnMapAPI, CollaborationAPI {
     
     override init(baseUrl: String) {
-        let newBaseUrl = baseUrl + "/mobile/"
-        super.init(baseUrl: newBaseUrl)
+        super.init(baseUrl: baseUrl)
     }
     
     func sendCollaboration(collaboration: Collaboration,
                            completionHandler: @escaping (DefaultDataResponse?) -> Void) {
         
-        let url = self.baseUrl
+        let url = self.baseUrl + "/mobile/"
         var responseApi: DefaultDataResponse?
         let parameters = ["tag" : Tag.sendCollaboration.rawValue, "tagImage" : collaboration.photo,
                           "tagVideo" : collaboration.video, "userId" : collaboration.userId,
@@ -48,7 +48,7 @@ class CollaborationService : ClickOnMapAPI, CollaborationAPI {
     
     func requestCollaborations(completionHandler: @escaping (CollaborationsDataResponse?) -> Void) {
         
-        let url = self.baseUrl
+        let url = self.baseUrl + "/mobile/"
         var responseApi: CollaborationsDataResponse?
         let parameters = ["tag" : Tag.requestCollaborations.rawValue] as [String : Any]
         
@@ -69,4 +69,25 @@ class CollaborationService : ClickOnMapAPI, CollaborationAPI {
         }
         
     }
+    
+    func requestCollaborationMidia(midiaPath: String, completionHandler: @escaping (UIImage?) -> Void) {
+        let url = self.baseUrl + midiaPath
+        print(url)
+        
+        Alamofire.request(url).responseImage { response in
+            
+            print(response.request as Any)
+            print(response.response as Any)
+            debugPrint(response.result)
+            
+            if let image = response.result.value {
+                completionHandler(image)
+                print("image downloaded: \(image)")
+            }
+            
+        }
+    }
+
+    
+    
 }

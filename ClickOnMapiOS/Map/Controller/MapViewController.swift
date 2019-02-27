@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMaps
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, GMSMapViewDelegate {
     
     // MARK: - Variables
     
@@ -70,6 +70,7 @@ class MapViewController: UIViewController {
         // Add the map to the view, hide it until we've got a location update.
         view.addSubview(mapView)
         mapView.isHidden = true
+        mapView.delegate = self
         
         insertButton()
 
@@ -87,6 +88,7 @@ class MapViewController: UIViewController {
              marker.position = CLLocationCoordinate2D(latitude: Double(collab.latitude)!, longitude: Double(collab.longitude)!)
              marker.title = collab.title
              marker.snippet = collab.description
+             marker.userData = collab
              marker.map = self.mapView
          }
         
@@ -103,6 +105,20 @@ class MapViewController: UIViewController {
         btn.layer.shadowOpacity = 0.8
         
         self.mapView.addSubview(btn)
+    }
+    
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        let collab = marker.userData as? Collaboration
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let collabDetailsViewController = storyboard.instantiateViewController(withIdentifier: "CollaborationDetails") as! CollaborationDetailsViewController
+        if let navigation = self.navigationController {
+            collabDetailsViewController.selectedCollab = collab
+            collabDetailsViewController.selectedVGISystem = self.selectedVGISystem
+            navigation.pushViewController(collabDetailsViewController, animated: true)
+        }
+        
     }
     
     // MARK: - Web Services - Request Collaborations
@@ -135,6 +151,9 @@ class MapViewController: UIViewController {
         let collabViewController = storyboard.instantiateViewController(withIdentifier: "Collaboration") as! CollaborationViewController
         if let navigation = self.navigationController {
             collabViewController.selectedVGISystem = self.selectedVGISystem
+            print("Latitude: \(self.locationManager.location?.coordinate.latitude)")
+            print("Longitude: \(self.locationManager.location?.coordinate.longitude)")
+            collabViewController.currentLocation = self.locationManager.location
             navigation.pushViewController(collabViewController, animated: true)
         }
         

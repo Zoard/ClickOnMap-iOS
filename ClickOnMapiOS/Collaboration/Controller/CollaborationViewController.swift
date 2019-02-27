@@ -23,8 +23,8 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
     var selectedVGISystem: VGISystem?
     var currentLocation: CLLocation?
     var collaboration: Collaboration?
-    var pickerViewData = [[EventType]]()
-    var pickerRow: Int = 0
+    var categoryPickerRow: Int = 0
+    var subcategoryPickerRow: Int = 0
     
     
     // MARK: View Life Cycle
@@ -81,7 +81,7 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
         
         
-        return vgiSystem.categories[self.pickerRow].subcategories.count
+        return vgiSystem.categories[self.categoryPickerRow].subcategories.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -94,14 +94,16 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
             return vgiSystem.categories[row].categoryDescription
         }
         
-        return vgiSystem.categories[self.pickerRow].subcategories[row].typeDescription
+        return vgiSystem.categories[self.categoryPickerRow].subcategories[row].typeDescription
         
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0 {
-            self.pickerRow = row
+            self.categoryPickerRow = row
         }
+        
+        self.subcategoryPickerRow = row
         
         self.categoriesPickerView.reloadComponent(1)
     }
@@ -127,7 +129,7 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
         if (title != "" && systemDescription != "") {
             
         } else {
-            Alert(controller: self).show("Campo em Branco", message: "Todos os campos são obrigatórios.")
+            Alert(controller: self).show("Campo em Branco", message: "Todos os campos (*) são obrigatórios.")
             return false
         }
         
@@ -141,13 +143,27 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
             return false
         }
         
+        let category = vgiSystem.categories[self.categoryPickerRow]
+        let categoryId = Int(category.id)!
+        let categoryName = category.categoryDescription
+        
+        let subcategories = category.subcategories
+        var subcategoryId = 0
+        var subcategoryName = ""
+        if !subcategories.isEmpty {
+            subcategoryId = Int(subcategories[self.subcategoryPickerRow].id)!
+            subcategoryName = subcategories[self.subcategoryPickerRow].typeDescription
+        }
+        
         let collab = Collaboration(collaborationId: 50, userId: user.email, userName: user.name,
                                    title: title, description: systemDescription,
-                                   collaborationDate: Date().serverFormat(), categoryId: 2,
-                                   categoryName: "", subcategoryId: 5, subcategoryName: "",
-                                   photo: "", video: "", audio: "",
+                                   collaborationDate: Date().serverFormat(), categoryId: categoryId,
+                                   categoryName: categoryName,
+                                   subcategoryId: subcategoryId, subcategoryName: subcategoryName,
+                                   photo: "N", video: "N", audio: "",
                                    latitude: String(location.coordinate.latitude),
                                    longitude: String(location.coordinate.longitude))
+        
         
         
         self.collaboration = collab
@@ -224,9 +240,25 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     @IBAction func takePicture(_ sender: UIButton) {
+        
     }
     
     @IBAction func takeVideo(_ sender: UIButton) {
+        
     }
+    
+    @IBAction func collaborate(_ sender: UIButton) {
+        
+        guard let vgiSystem = self.selectedVGISystem else {
+            print("Error in Collaborate")
+            return
+        }
+        
+        if inputTextFieldChecker(vgiSystem: vgiSystem) {
+            sendCollaboration()
+        }
+        
+    }
+    
     
 }

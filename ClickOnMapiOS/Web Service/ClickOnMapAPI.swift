@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 import AlamofireObjectMapper
 
 class ClickOnMapAPI {
@@ -61,9 +62,11 @@ protocol UserAPI {
 protocol CollaborationAPI {
     
     func sendCollaboration(collaboration: Collaboration,
-                           completionHandler : @escaping(DefaultDataResponse?) -> Void)
+                           completionHandler: @escaping(DefaultDataResponse?) -> Void)
     
     func requestCollaborations(completionHandler: @escaping(CollaborationsDataResponse?) -> Void)
+    
+    func requestCollaborationMidia(midiaPath: String, completionHandler: @escaping(UIImage?) -> Void)
     
     //TODO: SENDING COLLABORATIONS WITH MIDIA
     

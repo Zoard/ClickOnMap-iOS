@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.8.0)
+  - AlamofireImage (3.5.0):
+    - Alamofire (~> 4.8)
   - AlamofireObjectMapper (5.2.0):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
@@ -85,6 +87,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - AlamofireImage (~> 3.5)
   - AlamofireObjectMapper (~> 5.0)
   - Firebase/Core
   - Firebase/Messaging
@@ -99,6 +102,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireImage
     - AlamofireObjectMapper
     - Firebase
     - FirebaseAnalytics
@@ -121,6 +125,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   Firebase: 8bb9268bff82374f2cbaaabb143e725743c316ae
   FirebaseAnalytics: c06f9d70577d79074214700a71fd5d39de5550fb
@@ -141,6 +146,6 @@ SPEC CHECKSUMS:
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
 
-PODFILE CHECKSUM: 5064ff29f46a4af6a90ccfb0238493ec7b339fb1
+PODFILE CHECKSUM: 21cebe5e522e3bb303b016a5098c0236c81e9bd8
 
 COCOAPODS: 1.5.3

@@ -42,6 +42,50 @@ class LoginViewController : UIViewController {
         return UIStatusBarStyle.lightContent
     }
     
+    // MARK: - Web Services - Request VGISystem Categories
+    
+    func requestVGISystemCategoriesCompletionHandler(_ response: EventCategoryDataResponse?) {
+        
+        guard let responseCategories = response?.categories else {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            Alert(controller: self).showWithHandler("Sem Conexão",message: "Conecte-se à uma rede e tente novamente.",
+                                                    okButtonTitle: "Tentar Novamente", cancelButtonTitle: "Cancelar",
+                                                    completion: verifyUserCompletionAlert(_:))
+            return
+        }
+        
+        guard let responseData = response else {
+            return
+        }
+        
+        guard let vgiSystem = self.selectedVGISystem else {
+            return
+        }
+        
+        if (responseData.success == 1) {
+            vgiSystem.set(new: responseCategories)
+            vgiSystem.hasSession = true
+            VGISystem.update(vgiSystem)
+            self.delegate?.addTile(vgiSystem)
+            navigateToHubViewController()
+        } else {
+            print("Log: RegisterViewController_requestVGISystemCategoriesCompletionHandler")
+            Alert(controller: self).show("Cadastro Não Realizado", message: responseData.error_msg)
+        }
+        
+    }
+    
+    func requestVGISystemCategories() {
+        
+        guard let vgiSystem = self.selectedVGISystem else {
+            print("Log")
+            return
+        }
+        
+        VGISystemService(baseUrl: vgiSystem.address).requestVGISystemCategories(completionHandler: requestVGISystemCategoriesCompletionHandler(_:))
+        
+    }
+    
     // MARK: - Web Services - Send Mobile System
     
     func sendMobyleSystemCompletionHandler(_ response: DefaultDataResponse?) {
@@ -53,14 +97,17 @@ class LoginViewController : UIViewController {
             return
         }
         
-        if let vgiSystem = self.selectedVGISystem {
-            self.delegate?.addTile(vgiSystem)
+        guard let vgiSystem = self.selectedVGISystem else {
+            return
         }
         
-        if let navigation = self.navigationController {
-            navigation.popToRootViewController(animated: true)
+        if VGISystem.search(for: vgiSystem) != nil {
+            vgiSystem.hasSession = true
+            VGISystem.update(vgiSystem)
+            navigateToHubViewController()
+        } else {
+            requestVGISystemCategories()
         }
-        
     }
     
     func sendMobileSystem() {
@@ -76,6 +123,7 @@ class LoginViewController : UIViewController {
                                             firebaseKey: fcmToken,
                                             completionHandler: sendMobyleSystemCompletionHandler(_:))
     }
+    
     
     // MARK: - Web Services - Verify User
     
@@ -128,6 +176,14 @@ class LoginViewController : UIViewController {
 
     }
     
+    // MARK: - Navigation
+    
+    func navigateToHubViewController() {
+        if let navigation = self.navigationController {
+            navigation.popToRootViewController(animated: true)
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func login() {
@@ -147,9 +203,7 @@ class LoginViewController : UIViewController {
     }
     
     @IBAction func close() {
-        if let navigation = self.navigationController {
-            navigation.popToRootViewController(animated: true)
-        }
+        navigateToHubViewController()
     }
 }
 

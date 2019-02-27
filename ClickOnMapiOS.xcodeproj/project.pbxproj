@@ -15,6 +15,9 @@
 		2C5E59FD2148B64A00241984 /* AddTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FC2148B64A00241984 /* AddTile.swift */; };
 		2C5E59FF2148B80B00241984 /* SystemTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E59FE2148B80B00241984 /* SystemTile.swift */; };
 		2C5E5A022148C46100241984 /* SystemTileDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E5A012148C46100241984 /* SystemTileDelegate.swift */; };
+		2C6096D52226020000171DA2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6096D42226020000171DA2 /* Colors.xcassets */; };
+		2C6096D7222604A400171DA2 /* CollaborationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6096D6222604A400171DA2 /* CollaborationDetailsViewController.swift */; };
+		2C6096DA2227347300171DA2 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6096D92227347300171DA2 /* MediaViewController.swift */; };
 		2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */; };
 		2C7BA2F520C34A1E009FE671 /* HubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F420C34A1E009FE671 /* HubViewController.swift */; };
 		2C7BA2FA20C34A1E009FE671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7BA2F920C34A1E009FE671 /* Assets.xcassets */; };
@@ -86,6 +89,10 @@
 		2C5E59FC2148B64A00241984 /* AddTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTile.swift; sourceTree = "<group>"; };
 		2C5E59FE2148B80B00241984 /* SystemTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTile.swift; sourceTree = "<group>"; };
 		2C5E5A012148C46100241984 /* SystemTileDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemTileDelegate.swift; sourceTree = "<group>"; };
+		2C6096D42226020000171DA2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2C6096D6222604A400171DA2 /* CollaborationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationDetailsViewController.swift; sourceTree = "<group>"; };
+		2C6096D82226DBE900171DA2 /* ClickOnMapiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClickOnMapiOS.entitlements; sourceTree = "<group>"; };
+		2C6096D92227347300171DA2 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
 		2C7BA2EF20C34A1E009FE671 /* ClickOnMapiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickOnMapiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C7BA2F420C34A1E009FE671 /* HubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +254,7 @@
 		2C7BA2F120C34A1E009FE671 /* ClickOnMapiOS */ = {
 			isa = PBXGroup;
 			children = (
+				2C6096D82226DBE900171DA2 /* ClickOnMapiOS.entitlements */,
 				2CA408322189DF3200A2BC7F /* Web Service */,
 				2CC8C99821AA1000008D4C2C /* Firebase */,
 				2CC8C99B21AA12A3008D4C2C /* Utils */,
@@ -262,6 +270,7 @@
 				2C9901A1213C844000B5D001 /* Model */,
 				2C7BA2F220C34A1E009FE671 /* AppDelegate.swift */,
 				2C7BA2F920C34A1E009FE671 /* Assets.xcassets */,
+				2C6096D42226020000171DA2 /* Colors.xcassets */,
 				2C99019C213C811F00B5D001 /* Main.storyboard */,
 				2C7BA2FB20C34A1E009FE671 /* LaunchScreen.storyboard */,
 				2C7BA2FE20C34A1E009FE671 /* Info.plist */,
@@ -412,6 +421,8 @@
 			isa = PBXGroup;
 			children = (
 				2C99EC8521489D0B00026630 /* CollaborationViewController.swift */,
+				2C6096D6222604A400171DA2 /* CollaborationDetailsViewController.swift */,
+				2C6096D92227347300171DA2 /* MediaViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -594,6 +605,14 @@
 					2C7BA2EE20C34A1E009FE671 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2C7BA30220C34A1F009FE671 = {
 						CreatedOnToolsVersion = 9.1;
@@ -632,6 +651,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6096D52226020000171DA2 /* Colors.xcassets in Resources */,
 				2C7BA2FD20C34A1E009FE671 /* LaunchScreen.storyboard in Resources */,
 				2CA4083E2189F49600A2BC7F /* GoogleService-Info.plist in Resources */,
 				2C99019D213C811F00B5D001 /* Main.storyboard in Resources */,
@@ -720,6 +740,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ClickOnMapiOS/Pods-ClickOnMapiOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/NewPopMenu/PopMenu.framework",
@@ -734,6 +755,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopMenu.framework",
@@ -784,6 +806,7 @@
 				2C9901A3213C845600B5D001 /* VGISystem.swift in Sources */,
 				2C15F217214082C50073F7DF /* MapViewController.swift in Sources */,
 				2CA408342189DF5C00A2BC7F /* ClickOnMapAPI.swift in Sources */,
+				2C6096D7222604A400171DA2 /* CollaborationDetailsViewController.swift in Sources */,
 				2C7BA2F320C34A1E009FE671 /* AppDelegate.swift in Sources */,
 				2CA408382189E7D100A2BC7F /* EventType.swift in Sources */,
 				2C15F21D2140957C0073F7DF /* PendingCollaborationsViewController.swift in Sources */,
@@ -805,6 +828,7 @@
 				2C9901B1213CAD8200B5D001 /* AddSystemViewController.swift in Sources */,
 				2C9901A8213C90D800B5D001 /* LoginViewController.swift in Sources */,
 				2CC8C9A021AA3109008D4C2C /* EventCategoryDataResponse.swift in Sources */,
+				2C6096DA2227347300171DA2 /* MediaViewController.swift in Sources */,
 				2CEA7F8A20DA0B9700392A5A /* HubCollectionViewCell.swift in Sources */,
 				2CC8C9A321AA366C008D4C2C /* UserDataResponse.swift in Sources */,
 				2CA40842218A00E400A2BC7F /* UserService.swift in Sources */,
@@ -975,8 +999,9 @@
 			baseConfigurationReference = 7AABD19324CB8F178D3FCF92 /* Pods-ClickOnMapiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClickOnMapiOS/ClickOnMapiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T27P2U47KX;
+				DEVELOPMENT_TEAM = 7S2H235A78;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire\"",
@@ -1021,8 +1046,9 @@
 			baseConfigurationReference = 6C871C3637214B7F87535B8B /* Pods-ClickOnMapiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ClickOnMapiOS/ClickOnMapiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T27P2U47KX;
+				DEVELOPMENT_TEAM = 7S2H235A78;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/CoreOnly/Sources",

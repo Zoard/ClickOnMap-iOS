@@ -8,6 +8,7 @@ target 'ClickOnMapiOS' do
   # Pods for ClickOnMapiOS
   pod 'SkyFloatingLabelTextField', '~> 3.0'
   pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.5'
   pod 'AlamofireObjectMapper', '~> 5.0'
   pod 'ObjectMapper', '~> 3.3'
   pod 'GoogleMaps'

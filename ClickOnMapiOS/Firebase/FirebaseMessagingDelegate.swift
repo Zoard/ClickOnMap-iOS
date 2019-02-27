@@ -27,6 +27,8 @@ extension AppDelegate : MessagingDelegate {
     
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         
+        print("FCM_TOKEN: \(fcmToken)")
+        
         let creationDate = Date().serverFormat()
         print(creationDate)
         FirebaseService().sendFirebaseKey(firebaseKey: fcmToken, creationDate: creationDate,

@@ -102,6 +102,7 @@ class RegisterViewController : UIViewController {
         }
         
         vgiSystem.user = user
+        vgiSystem.hasSession = true
         self.delegate?.addTile(vgiSystem)
         
         if let navigation = self.navigationController {
