@@ -31,7 +31,6 @@ class AddSystemViewController : UIViewController, UISearchBarDelegate, UITableVi
         self.addSystemTableView.dataSource = self
         self.addSystemTableView.delegate = self
         self.systemSearchBar.delegate = self
-        
         self.searchList = self.vgiSystems
         
         changeSearchBarAttributes()

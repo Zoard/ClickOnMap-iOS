@@ -17,12 +17,16 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var categoriesPickerView: UIPickerView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var photoButton: UIButton!
+    @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var collaborateButton: UIButton!
     
     // MARK: - Variables
     
     var selectedVGISystem: VGISystem?
     var currentLocation: CLLocation?
     var collaboration: Collaboration?
+    var selectedPendingCollaboration: Collaboration?
     var categoryPickerRow: Int = 0
     var subcategoryPickerRow: Int = 0
     
@@ -43,9 +47,114 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
         
         configurePickerData()
         
+        if let pendingCollab = self.selectedPendingCollaboration {
+            configureLayout(for: pendingCollab)
+        }
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    // MARK: - Methods
+    
+    func configureLayout(for pendingCollab: Collaboration) {
+        
+        self.titleTextField.text = pendingCollab.title
+        self.descriptionTextView.text = pendingCollab.collaborationDescription
+        
+        if pendingCollab.photo != "" {
+            self.photoButton.imageView?.image = UIImage(named: "ic_photo_on")
+        } else {
+            self.photoButton.imageView?.image = UIImage(named: "ic_photo_off")
+        }
+        
+        if pendingCollab.video != "" {
+            self.videoButton.imageView?.image = UIImage(named: "ic_video_on")
+        } else {
+            self.videoButton.imageView?.image = UIImage(named: "ic_video_off")
+        }
+        
+        self.collaborateButton.titleLabel?.text = "Salvar Edição"
+    }
+    
+    //TODO: ADD PHOTO AND VIDEO OPTIONS IN HERE
+    func inputTextFieldChecker(vgiSystem: VGISystem) -> Bool {
+        
+        guard let title = self.titleTextField.text else {
+            return false
+        }
+        guard let collabDescription = self.descriptionTextView.text else {
+            return false
+        }
+        
+        if (title != "" && collabDescription != "") {
+            
+        } else {
+            Alert(controller: self).show("Campo em Branco", message: "Todos os campos (*) são obrigatórios.")
+            return false
+        }
+        
+        let category = vgiSystem.categories[self.categoryPickerRow]
+        let categoryId = Int(category.id)!
+        let categoryName = category.categoryDescription
+        let subcategories = category.subcategories
+        var subcategoryId = 0
+        var subcategoryName = ""
+        if !subcategories.isEmpty {
+            subcategoryId = Int(subcategories[self.subcategoryPickerRow].id)!
+            subcategoryName = subcategories[self.subcategoryPickerRow].typeDescription
+        }
+        
+        if let pendingCollab = self.selectedPendingCollaboration {
+            
+            pendingCollab.title = title
+            pendingCollab.collaborationDescription = collabDescription
+            pendingCollab.categoryId = categoryId
+            pendingCollab.categoryName = categoryName
+            pendingCollab.subcategoryId = subcategoryId
+            pendingCollab.subcategoryName = subcategoryName
+            
+            self.selectedPendingCollaboration = pendingCollab
+            
+        } else {
+            guard let user = vgiSystem.user else {
+                print("LOG_USER")
+                return false
+            }
+            
+            guard let location = currentLocation else {
+                print("LOG_LOCATION")
+                return false
+            }
+            
+            let collab = Collaboration()
+            
+            collab.set(realmId: UUID().uuidString, userId: user.email, userName: user.name,
+                       title: title, collabDescription: collabDescription,
+                       collaborationDate: Date().serverFormat(), categoryId: categoryId,
+                       categoryName: categoryName,
+                       subcategoryId: subcategoryId, subcategoryName: subcategoryName,
+                       photo: "", video: "", audio: "",
+                       latitude: String(location.coordinate.latitude),
+                       longitude: String(location.coordinate.longitude))
+            
+            
+            self.collaboration = collab
+        }
+        
+        return true
+    }
+    
+    func saveCollaboration(_ alert: UIAlertAction) {
+        guard let pendingCollab = self.selectedPendingCollaboration else {
+            return
+        }
+        
+        Collaboration.update(pendingCollab)
+        if let navigation = self.navigationController {
+            navigation.popViewController(animated: true)
+        }
     }
     
     // MARK: - Picker View
@@ -108,70 +217,31 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
         self.categoriesPickerView.reloadComponent(1)
     }
     
-    // MARK: - Methods
     
-    func inputTextFieldChecker(vgiSystem: VGISystem) -> Bool {
+    // MARK: - Web Services - Send Collaboration
+    
+    func failedCollab(_ alert: UIAlertAction) {
         
-        guard let title = self.titleTextField.text else {
-            return false
-        }
-        guard let systemDescription = self.descriptionTextView.text else {
-            return false
-        }
-        /*guard let password = self.passwordTextField.text else {
-            return false
-        }
-        guard let passwordConfirm = self.passwordConfirmTextField.text else {
-            return false
-        }*/
-        
-        
-        if (title != "" && systemDescription != "") {
-            
-        } else {
-            Alert(controller: self).show("Campo em Branco", message: "Todos os campos (*) são obrigatórios.")
-            return false
-        }
-        
-        guard let user = vgiSystem.user else {
-            print("LOG_USER")
-            return false
+        switch alert.title {
+        case AlertActions.tryAgain.rawValue:
+            sendCollaboration()
+            break
+        case AlertActions.save.rawValue:
+            guard let collab = self.collaboration else {
+                return
+            }
+            Collaboration.add(new: collab)
+            let ok = UIAlertAction(title: AlertActions.ok.rawValue, style: .default, handler: successCollab)
+            Alert(controller: self).showWithHandler("Colaboração Salva",
+                                                    message: "Sua colaboração foi salva com sucesso e pode ser vista na sua lista de colaborações pendentes",
+                                                    firstAction: ok)
+            break
+        default:
+            break
         }
         
-        guard let location = currentLocation else {
-            print("LOG_LOCATION")
-            return false
-        }
         
-        let category = vgiSystem.categories[self.categoryPickerRow]
-        let categoryId = Int(category.id)!
-        let categoryName = category.categoryDescription
-        
-        let subcategories = category.subcategories
-        var subcategoryId = 0
-        var subcategoryName = ""
-        if !subcategories.isEmpty {
-            subcategoryId = Int(subcategories[self.subcategoryPickerRow].id)!
-            subcategoryName = subcategories[self.subcategoryPickerRow].typeDescription
-        }
-        
-        let collab = Collaboration(collaborationId: 50, userId: user.email, userName: user.name,
-                                   title: title, description: systemDescription,
-                                   collaborationDate: Date().serverFormat(), categoryId: categoryId,
-                                   categoryName: categoryName,
-                                   subcategoryId: subcategoryId, subcategoryName: subcategoryName,
-                                   photo: "N", video: "N", audio: "",
-                                   latitude: String(location.coordinate.latitude),
-                                   longitude: String(location.coordinate.longitude))
-        
-        
-        
-        self.collaboration = collab
-        
-        return true
     }
-    
-    // MARK: Web Services - Send Collaboration
     
     func successCollab(_ alert: UIAlertAction) {
         if let navigation = self.navigationController {
@@ -184,11 +254,16 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     func sendCollaborationCompletionHandler(_ response: DefaultDataResponse?) {
-        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         guard let responseData = response else {
-            Alert(controller: self).showWithHandler("Sem Conexão",message: "Conecte-se à uma rede e tente novamente.",
-                                                    okButtonTitle: "Tentar Novamente", cancelButtonTitle: "Cancelar",
-                                                    completion: successCollab(_:))
+            
+            let tryAgain = UIAlertAction(title: AlertActions.tryAgain.rawValue, style: .default, handler: failedCollab)
+            let save = UIAlertAction(title: AlertActions.save.rawValue, style: .default, handler: failedCollab)
+            let cancel = UIAlertAction(title: AlertActions.cancel.rawValue, style: .destructive, handler: nil)
+            Alert(controller: self).showWithHandler("Sem Conexão",
+                                                    message: "Conecte-se à uma rede para tentar novamente ou salve sua colaboração para enviá-la mais tarde.",
+                                                    firstAction: tryAgain, secondAction: save,
+                                                    thirdAction: cancel)
             return
         }
         
@@ -196,12 +271,12 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
             Alert(controller: self).showWithHandler("Colaboração Realizada!",
                                                     message: "Sua colaboração foi realizada com sucesso!",
                                                     okButtonTitle: "Ok", cancelButtonTitle: "",
-                                                    completion: successCollab(_:))
+                                                    completion: successCollab)
         } else {
             Alert(controller: self).showWithHandler("Colaboração Não Realizada",
                                          message: responseData.error_msg,
                                          okButtonTitle: "Tentar Novamente", cancelButtonTitle: "Cancelar",
-                                         completion: successCollab(_:))
+                                         completion: successCollab)
         }
         
     }
@@ -214,7 +289,8 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
         
         if (inputTextFieldChecker(vgiSystem: vgiSystem)) {
-            CollaborationService(baseUrl: vgiSystem.address).sendCollaboration(collaboration: self.collaboration!, completionHandler: sendCollaborationCompletionHandler(_:))
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            CollaborationService(baseUrl: vgiSystem.address).sendCollaboration(collaboration: self.collaboration!, completionHandler: sendCollaborationCompletionHandler)
         }
         
         
@@ -255,9 +331,15 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
         
         if inputTextFieldChecker(vgiSystem: vgiSystem) {
-            sendCollaboration()
+            
+            if self.selectedPendingCollaboration != nil {
+                let save = UIAlertAction(title: AlertActions.save.rawValue, style: .default, handler: saveCollaboration)
+                let cancel = UIAlertAction(title: AlertActions.cancel.rawValue, style: .cancel, handler: nil)
+                Alert(controller: self).showWithHandler("Salvar Colaboração Editada", message: "Clique em salvar para confirmar a edição da colaboração.", firstAction: save, secondAction: cancel)
+            } else {
+                sendCollaboration()
+            }
         }
-        
     }
     
     

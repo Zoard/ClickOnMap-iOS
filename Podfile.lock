@@ -84,6 +84,7 @@ PODS:
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
   - SkyFloatingLabelTextField (3.6.0)
+  - SwipeCellKit (2.5.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -98,6 +99,7 @@ DEPENDENCIES:
   - "ObjectMapper+Realm"
   - RealmSwift
   - SkyFloatingLabelTextField (~> 3.0)
+  - SwipeCellKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -122,6 +124,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SkyFloatingLabelTextField
+    - SwipeCellKit
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
@@ -145,7 +148,8 @@ SPEC CHECKSUMS:
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SkyFloatingLabelTextField: 38164979b79512f9ff9288ad8acfc4bbf5d843e3
+  SwipeCellKit: 30fd6a4f8a8b8ac864ea389c8b4c8bac5ba5471a
 
-PODFILE CHECKSUM: 21cebe5e522e3bb303b016a5098c0236c81e9bd8
+PODFILE CHECKSUM: 558659354383ce92d3977dfbbdc0979191efa3dc
 
 COCOAPODS: 1.5.3

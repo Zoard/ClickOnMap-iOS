@@ -19,4 +19,17 @@ extension Date {
         
     }
     
+    func appFormat(_ date: String) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY HH:mm:ss"
+        
+        if let formattedDate =  dateFormatter.date(from: date) {
+            return dateFormatter.string(from: formattedDate)
+        }
+        
+        return date
+        
+    }
+    
 }

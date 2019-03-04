@@ -87,7 +87,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
              let marker = GMSMarker()
              marker.position = CLLocationCoordinate2D(latitude: Double(collab.latitude)!, longitude: Double(collab.longitude)!)
              marker.title = collab.title
-             marker.snippet = collab.description
+             marker.snippet = collab.collaborationDescription
              marker.userData = collab
              marker.map = self.mapView
          }

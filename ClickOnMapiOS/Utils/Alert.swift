@@ -8,6 +8,16 @@
 
 import UIKit
 
+enum AlertActions: String {
+    
+    case tryAgain = "Tentar Novamente"
+    case ok = "Ok"
+    case understood = "Entendi"
+    case cancel = "Cancelar"
+    case save = "Salvar"
+    case delete = "Deletar"
+}
+
 class Alert {
     
     let controller: UIViewController
@@ -37,7 +47,7 @@ class Alert {
                                       preferredStyle: UIAlertControllerStyle.alert)
         
         let ok = UIAlertAction(title: okButtonTitle,
-                               style: UIAlertActionStyle.destructive,
+                               style: UIAlertActionStyle.default,
                                handler: completion)
         
         let cancel = UIAlertAction(title: cancelButtonTitle,
@@ -47,5 +57,29 @@ class Alert {
         alert.addAction(ok)
         alert.addAction(cancel)
         self.controller.present(alert, animated: true, completion: nil)
+    }
+    
+    func showWithHandler(_ title:String = "Desculpe", message: String = "Erro não esperado",
+                         firstAction: UIAlertAction? = nil, secondAction: UIAlertAction? = nil,
+                         thirdAction: UIAlertAction? = nil) {
+        
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        if let first = firstAction {
+            alert.addAction(first)
+        }
+        
+        if let second = secondAction {
+            alert.addAction(second)
+        }
+        
+        if let third = thirdAction {
+            alert.addAction(third)
+        }
+        
+        self.controller.present(alert, animated: true, completion: nil)
+        
     }
 }

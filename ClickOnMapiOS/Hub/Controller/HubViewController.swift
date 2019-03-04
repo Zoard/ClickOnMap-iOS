@@ -185,11 +185,6 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
     func systemMenuNavigate(to systemTile: SystemTile) {
         
         let vgiSystem = VGISystem.search(for: systemTile.vgiSystem)
-        if let categories = vgiSystem?.categories {
-            print("HUB_VIEW_CONTROLLER: HAS CATEGORIES")
-        } else {
-            print("HUB_VIEW_CONTROLLER: HAS NOT CATEGORIES")
-        }
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let menuController = storyboard.instantiateViewController(withIdentifier: "VGISystem") as! UITabBarController
@@ -198,6 +193,9 @@ class HubViewController: UIViewController, UICollectionViewDataSource, UICollect
         }
         if let mapViewController = menuController.viewControllers![1] as? MapViewController {
             mapViewController.selectedVGISystem = vgiSystem
+        }
+        if let pendingCollabsViewController = menuController.viewControllers![2] as? PendingCollaborationsViewController {
+            pendingCollabsViewController.selectedVGISystem = vgiSystem
         }
         if let navigation = self.navigationController {
             navigation.pushViewController(menuController, animated: true)

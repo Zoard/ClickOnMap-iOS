@@ -18,6 +18,7 @@ target 'ClickOnMapiOS' do
   pod 'RealmSwift'
   pod 'ObjectMapper+Realm'
   pod 'NewPopMenu', '~> 1.1'
+  pod 'SwipeCellKit'
 
   target 'ClickOnMapiOSTests' do
     inherit! :search_paths

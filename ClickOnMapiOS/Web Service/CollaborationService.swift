@@ -22,9 +22,18 @@ class CollaborationService : ClickOnMapAPI, CollaborationAPI {
         
         let url = self.baseUrl + "/mobile/"
         var responseApi: DefaultDataResponse?
-        let parameters = ["tag" : Tag.sendCollaboration.rawValue, "tagImage" : collaboration.photo,
-                          "tagVideo" : collaboration.video, "userId" : collaboration.userId,
-                          "title" : collaboration.title, "description" : collaboration.description,
+        var tagImage = "N"
+        var tagVideo = "N"
+        if collaboration.photo != "" {
+            tagImage = "Y"
+        }
+        if collaboration.video != ""{
+            tagVideo = "Y"
+        }
+        
+        let parameters = ["tag" : Tag.sendCollaboration.rawValue, "tagImage" : tagImage,
+                          "tagVideo" : tagVideo, "userId" : collaboration.userId,
+                          "title" : collaboration.title, "description" : collaboration.collaborationDescription,
                           "idCategory" : collaboration.categoryId, "idType" : collaboration.subcategoryId,
                           "latitude" : collaboration.latitude, "longitude" : collaboration.longitude,
                           "date" : collaboration.collaborationDate] as [String : Any]

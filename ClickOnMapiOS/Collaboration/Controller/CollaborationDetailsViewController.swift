@@ -45,7 +45,7 @@ class CollaborationDetailsViewController : UIViewController {
         }
         
         self.collabTitleLabel.text = collaboration.title
-        self.collabDescriptionTextView.text = collaboration.description
+        self.collabDescriptionTextView.text = collaboration.collaborationDescription
         self.collabCategoryLabel.text = collaboration.categoryName
         self.collabSubcategoryLabel.text = collaboration.subcategoryName
         self.collabUsernameLabel.text = collaboration.userName

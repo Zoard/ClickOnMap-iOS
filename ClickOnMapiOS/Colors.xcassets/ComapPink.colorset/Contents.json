@@ -5,14 +5,14 @@
   },
   "colors" : [
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "color" : {
         "color-space" : "srgb",
         "components" : {
-          "red" : "0xFF",
+          "red" : "1.000",
           "alpha" : "1.000",
-          "blue" : "0x66",
-          "green" : "0x33"
+          "blue" : "0.400",
+          "green" : "0.200"
         }
       }
     }
