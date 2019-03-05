@@ -106,16 +106,17 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
             subcategoryName = subcategories[self.subcategoryPickerRow].typeDescription
         }
         
+        let collab = Collaboration()
+        
         if let pendingCollab = self.selectedPendingCollaboration {
             
-            pendingCollab.title = title
-            pendingCollab.collaborationDescription = collabDescription
-            pendingCollab.categoryId = categoryId
-            pendingCollab.categoryName = categoryName
-            pendingCollab.subcategoryId = subcategoryId
-            pendingCollab.subcategoryName = subcategoryName
-            
-            self.selectedPendingCollaboration = pendingCollab
+            collab.set(realmId: pendingCollab.realmId, userId: pendingCollab.userId, userName: pendingCollab.userName,
+                       title: title, collabDescription: collabDescription,
+                       collaborationDate: pendingCollab.collaborationDate, categoryId: categoryId,
+                       categoryName: categoryName,
+                       subcategoryId: subcategoryId, subcategoryName: subcategoryName,
+                       photo: pendingCollab.photo, video: pendingCollab.video, audio: "",
+                       latitude: pendingCollab.latitude, longitude: pendingCollab.longitude)
             
         } else {
             guard let user = vgiSystem.user else {
@@ -128,8 +129,6 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
                 return false
             }
             
-            let collab = Collaboration()
-            
             collab.set(realmId: UUID().uuidString, userId: user.email, userName: user.name,
                        title: title, collabDescription: collabDescription,
                        collaborationDate: Date().serverFormat(), categoryId: categoryId,
@@ -140,8 +139,10 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
                        longitude: String(location.coordinate.longitude))
             
             
-            self.collaboration = collab
+            
         }
+        
+        self.collaboration = collab
         
         return true
     }
@@ -151,7 +152,11 @@ class CollaborationViewController: UIViewController, UIPickerViewDelegate, UIPic
             return
         }
         
-        Collaboration.update(pendingCollab)
+        guard let editedCollab = self.collaboration else {
+            return
+        }
+        
+        Collaboration.update(editedCollab)
         if let navigation = self.navigationController {
             navigation.popViewController(animated: true)
         }

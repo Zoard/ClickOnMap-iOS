@@ -103,8 +103,16 @@ class Collaboration : Object, Mappable {
     }
     
     static func update(in realm: Realm = try! Realm(), _ collaboration: Collaboration) {
-        realm.beginWrite()
         try! realm.write {
+            /*realm.beginWrite()
+            collaboration.title = editedCollaboration.title
+            collaboration.collaborationDescription = editedCollaboration.collaborationDescription
+            collaboration.categoryId = editedCollaboration.categoryId
+            collaboration.categoryName = editedCollaboration.categoryName
+            collaboration.subcategoryId = editedCollaboration.subcategoryId
+            collaboration.subcategoryName = editedCollaboration.subcategoryName
+            collaboration.photo = editedCollaboration.photo
+            collaboration.video = editedCollaboration.video*/
             realm.add(collaboration, update: true)
             try realm.commitWrite()
         }
